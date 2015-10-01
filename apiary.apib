@@ -181,6 +181,18 @@ Wando API - some init info
 
 ## Init [/product/list]
 
++ Parameters
+    + keyword (string, required) - search keyword
+    + min_price (number, optional) - minimum price
+    + max_price (number, optinoal) - maximum price
+    + filters (string, optional) - filter offers using parameters
+    + no_auctions (enum["0", "1"], optional)
+        + Default: `0`
+    + sort_by (enum["relevance", "priceAsc", "priceDesc"], optional) - sorting type
+        + Default: `relevance`
+    + cb (number, optional) - cache breaker, always refresh data
+    + provider (string, optional) - comma separated provider string identifiers
+
 ### Get list of products [GET]
 
 + Response 200 (application/json)
