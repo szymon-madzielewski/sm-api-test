@@ -5,20 +5,9 @@ HOST: http://polls.apiblueprint.org/
 
 Wando API
 
-## Page Collection [/page/init]
+## Init [/page/init]
 
-### Page initial call [GET]
-
-+ Response 200 (application/json)
-
-        {
-            "status"    : "success",
-            "foo"       : "bar"
-        }
-        
-## Page Collection [/page/imprint]
-
-### Page imprint data [GET]
+### Get page init data [GET]
 
 + Response 200 (application/json)
 
@@ -26,9 +15,9 @@ Wando API
             "status"    : "success"
         }
         
-## Page Collection [/page/terms]
+## Imprint [/page/imprint]
 
-### Page terms data [GET]
+### Get imprint data [GET]
 
 + Response 200 (application/json)
 
@@ -36,9 +25,19 @@ Wando API
             "status"    : "success"
         }
         
-## Page Collection [/page/privacy]
+## Terms [/page/terms]
 
-### Page privacy data [GET]
+### Get terms data [GET]
+
++ Response 200 (application/json)
+
+        {
+            "status"    : "success"
+        }
+        
+## Privacy [/page/privacy]
+
+### Get privacy data [GET]
 
 + Response 200 (application/json)
 
