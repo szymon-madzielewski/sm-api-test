@@ -202,7 +202,10 @@ Wando API - some init info
             "status"    : "success"
         }
 
-## Product detials [/product/details]
+## Product detials [/product/details/{offerStringId}]
+
++ Parameters
+    + offerStringId (string) - offer string identifier, e.g. mac+mini,1234
 
 ### Get single product details data [GET]
 
@@ -212,7 +215,18 @@ Wando API - some init info
             "status"    : "success"
         }
         
-## Filters [/product/filters]
+## Filters [/product/filters?keyword={keyword}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&cb={cb}&provider={provider}]
+
++ Parameters
+    + keyword (string, required) - search keyword
+    + min_price (number, optional) - minimum price
+    + max_price (number, optional) - maximum price
+    + filters (string, optional) - filter offers using parameters
+    + no_auctions (enum["0", "1"], optional)
+        + Default: `0`
+    + cb (enum["0", "1"], optional) - cache breaker, always refresh data
+        + Default: `0`
+    + provider (string, optional) - comma separated provider string identifiers
 
 ### Get filters data [GET]
 
@@ -222,7 +236,10 @@ Wando API - some init info
             "status"    : "success"
         }
         
-## Get redirect url [/product/redirect]
+## Get redirect url [/product/redirect/{offerStringId}]
+
++ Parameters
+    + offerStringId (string) - offer string identifier, e.g. mac+mini,1234
 
 ### Get get product redirect url [GET]
 
