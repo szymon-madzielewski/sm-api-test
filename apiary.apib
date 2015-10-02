@@ -431,7 +431,8 @@ Wando API - some init info
         {
             "status"    : "success"
         }
-        
+
+
 ## Wishlist get offer list [/product/wishlist]
 
 ### Get products in wishlist [GET]
@@ -469,6 +470,77 @@ Wando API - some init info
             "status"    : "success",
             "message"   : ""
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+## Compare get offer list [/product/compare]
+
+### Get products in compare [GET]
+
++ Response 200 (application/json)
+
+        {
+            "status"    : "success",
+            "wishlist"  : {
+                "total_no"  : 1,
+                "list"      : {
+                
+                }
+            }
+        }
+        
+## Compare add new product [/product/compare/add/{offerStringId}]
+
+### Add products in compare [POST]
+
++ Response 200 (application/json)
+
+        {
+            "status"    : "success",
+            "message"   : ""
+        }
+        
+## Compare remove offer [/product/compare/remove/{offerStringId}]
+
+### Add products in compare [GET]
+
++ Response 200 (application/json)
+
+        {
+            "status"    : "success",
+            "message"   : ""
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
 ## Review [/product/review/{offerStringId}]
 
