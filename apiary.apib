@@ -193,7 +193,7 @@ Wando API - some init info
     + page (number, optional) - page number
         + Default: `1`
     + per_page (number, optional) - number of elements per page
-        + Default: `10`
+        + Default: `25`
     + cb (enum["0", "1"], optional) - cache breaker, always refresh data
         + Default: `0`
     + provider (string, optional) - comma separated provider string identifiers
@@ -223,18 +223,20 @@ Wando API - some init info
                 "index"                 : 0,
                 "rating"                : 5,
                 
+                "item_id"               : "B00XZFYLY8",
                 "provider"              : "amazon",
                 "merchantId"            : "amazon",
                 "merchantLogoUrl"       : "https:\/\/s3.eu-central-1.amazonaws.com\/fe-statics\/images\/amazon_logo_small.jpg",
-                "item_id"               : "B00XZFYLY8",
                 "thumbPhotoUrl"         : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL._SL160_.jpg",
                 "mainPhotoUrl"          : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL.jpg",
                 "oldPrice"              : null,
                 "price"                 : "$1,850.00 - 2,449.00",
                 "priceMin"              : 1850,
                 "priceMax"              : 2449,
+                "discountPercent"       : 20,
                 "priceCurrency"         : "USD",
                 "shippingPrice"         : "$100",
+                
                 "title"                 : "Apple iMac MF885LL\/A 27-Inch Desktop (NEWEST VERSION)",
                 "description"           : "3.3GHz quad-core Intel Core i5. Turbo Boost up to 3.7GHz. 8GB (two 4GB) memory. 1TB hard drive1. AMD Radeon R9 M290 with 2GB video memory. 27\" Retina 5K IPS Display. 5120 x 2880 Native Resolution. 3.3 GHz Intel Core i5 (Haswell). 8GB of 1600 MHz DDR3 RAM. 1TB 7200 rpm Hard Drive. AMD Radeon M290 GPU (2GB GDDR5). 802.11ac Wi-Fi, Bluetooth 4.0. 2x Thunderbolt 2 and 4x USB 3.0 Ports. FaceTime HD Camera, Dual Mics, Speakers. Mac OS X 10.10 Yosemite.",
                 "validUntil"            : null,
@@ -243,8 +245,8 @@ Wando API - some init info
                     "silver"
                 ],
                 "categoryName"          : "Personal Computer",
+                
                 "isSpecialOffer"        : null,
-                "discountPercent"       : null,
                 
                 "similarOfferKeyword"   : "Apple iMac MF885LL A 27 Inch",
                 "wishlistActive"        : false,
