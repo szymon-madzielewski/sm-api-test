@@ -217,7 +217,18 @@ Wando API - some init info
 + Response 200 (application/json)
 
         {
-            "status"    : "success"
+            "status"    : "success",
+            "products"  : {
+                "productsNo"    : 25,
+                "list"          : {
+                
+                }
+            },
+            "paginate"  : {
+                "page"          : 1,
+                "per_page"      : 25,
+                "last_page_no"  : 5
+            }
         }
 
 ## Product detials [/product/details/{offerStringId}]
@@ -290,6 +301,7 @@ Wando API - some init info
         {
             "status"    : "success",
             "filters"   : {
+            
             }
         }
         
@@ -317,6 +329,7 @@ Wando API - some init info
             "wishlist"  : {
                 "productsNo"    : 0,
                 "list"          : {
+                
                 }
             }
         }
@@ -328,7 +341,8 @@ Wando API - some init info
 + Response 200 (application/json)
 
         {
-            "status"    : "success"
+            "status"    : "success",
+            "message"   : ""
         }
         
 ## Wishlist remove offer [/product/wishlist/remove/{offerKey}]
@@ -338,7 +352,8 @@ Wando API - some init info
 + Response 200 (application/json)
 
         {
-            "status"    : "success"
+            "status"    : "success",
+            "message"   : ""
         }
         
 ## Review [/product/reviews]
@@ -348,7 +363,13 @@ Wando API - some init info
 + Response 200 (application/json)
 
         {
-            "status"    : "success"
+            "status"    : "success",
+            "reviews"   : {
+                "reviewsNo" : 0,
+                "list"      : {
+                
+                }
+            }
         }
         
 ## Post new review [/product/reviews/add]
