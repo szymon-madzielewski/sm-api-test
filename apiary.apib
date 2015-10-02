@@ -470,23 +470,7 @@ Wando API - some init info
             "status"    : "success",
             "message"   : ""
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
 ## Compare get products list [/product/compare]
 
 ### Get products in compare [GET]
@@ -505,6 +489,9 @@ Wando API - some init info
         
 ## Compare add new product [/product/compare/add/{productStringId}]
 
++ Parameters
+    + productStringId (string) - product string identifier, e.g. mac+mini,1234
+
 ### Add products in compare [POST]
 
 + Response 200 (application/json)
@@ -515,6 +502,9 @@ Wando API - some init info
         }
         
 ## Compare remove product [/product/compare/remove/{productStringId}]
+
++ Parameters
+    + productStringId (string) - product string identifier, e.g. mac+mini,1234
 
 ### Add products in compare [GET]
 
