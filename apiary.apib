@@ -484,6 +484,11 @@ Wando API - some init info
 
 ### Add products in wishlist [POST]
 
++ Attributes
+    + id (number)
+    + message (string) - The blog post article
+    + author: john@appleseed.com (string) - Author of the blog post
+
 + Response 200 (application/json)
 
         {
@@ -504,6 +509,7 @@ Wando API - some init info
             "status"    : "success",
             "message"   : ""
         }
+
 
 ## Compare get products list [/product/compare]
 
@@ -548,22 +554,6 @@ Wando API - some init info
             "status"    : "success",
             "message"   : ""
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
 ## Review [/product/review/{productStringId}]
