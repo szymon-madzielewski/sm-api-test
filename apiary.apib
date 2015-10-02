@@ -18,13 +18,11 @@ Wando API - some init info
             "contact_email" : "info@products-i-want.com",
             "category_data" : [
                 {
-                    "id"            : 4760,
                     "name"          : "Cars and Accessories",
-                    "clickout_url"  : "/product/list?mainCat=cars+and+accessories"
+                    "clickout_url"  : "/product/list?main_cat=cars+and+accessories"
                 }, {
-                    "id"            : 4761,
                     "name"          : "Clothing and Accessories",
-                    "clickout_url"  : "/product/list?mainCat=clothing+and+accessories"
+                    "clickout_url"  : "/product/list?main_cat=clothing+and+accessories"
                 }
             ],
             "lang": {
@@ -47,9 +45,22 @@ Wando API - some init info
                     }
                 },
                 "product": {
-                    "falz"      : "/product/falz",
-                    "page"      : "/product/list",
-                    "search"    : "/product/public"
+                    "list"      : "/product/list",
+                    "details"   : "/product/details",
+                    "filters"   : "/product/filters",
+                    "wishlist"  : {
+                        "list"      : "/product/wishlist",
+                        "add"       : "/product/wishlist",
+                        "remove"    : "/product/wishlist"
+                    },
+                    "compare"   : {
+                        "list"      : "/product/compare",
+                        "add"       : "/product/compare/add",
+                        "remove"    : "/product/compare/remove"
+                    },
+                    "reviews"   : {
+                        
+                    }
                 }
             }
         }
