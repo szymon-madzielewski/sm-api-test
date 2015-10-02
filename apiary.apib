@@ -189,6 +189,36 @@ Wando API - some init info
 
 # Group Products
 
+
+## Get products list [/product/falz?keyword={keyword}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}]
+
++ Parameters
+    + keyword (string, required) - search keyword
+    + min_price (number, optional) - minimum price
+    + max_price (number, optional) - maximum price
+    + filters (string, optional) - filter offers using parameters
+    + no_auctions (enum["0", "1"], optional)
+        + Default: `0`
+    + sort_by (enum["relevance", "priceAsc", "priceDesc"], optional) - sorting type
+        + Default: `relevance`
+    + page (number, optional) - page number
+        + Default: `1`
+    + per_page (number, optional) - number of elements per page
+        + Default: `25`
+    + cb (enum["0", "1"], optional) - cache breaker, always refresh data
+        + Default: `0`
+    + provider (string, optional) - comma separated provider string identifiers
+
++ Response 200 (application/json)
+
+        {
+            "status"        : "success",
+            "product_url"   : {
+                "list_url"      : "/product/list?keyword={keyword}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}",
+                "filters_ulr"   : "/product/filters?keyword={keyword}"
+            }
+        }
+        
 ## Get products list [/product/list?keyword={keyword}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}]
 
 + Parameters
