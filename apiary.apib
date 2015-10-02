@@ -485,9 +485,15 @@ Wando API - some init info
 ### Add products in wishlist [POST]
 
 + Attributes
-    + id (number)
-    + message (string) - The blog post article
-    + author: john@appleseed.com (string) - Author of the blog post
+    + username (string, required) - current username
+    + comment (string, required) - user product review comment
+    + rating (enum[number], required) - user product rating
+        + Members
+            + `<enumeration value 1>` - <enumeration description 1>
+            + `<enumeration value 2>` - <enumeration description 2>
+            + `<enumeration value 3>` - <enumeration description 3>
+
+        + Default: `5`
 
 + Response 200 (application/json)
 
