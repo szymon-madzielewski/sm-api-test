@@ -544,8 +544,13 @@ Wando API - some init info
 + Response 200 (application/json)
 
         {
-            "status"    : "success",
-            "message"   : ""
+            "status"        : "success",
+            "message"       : "Product added to the wishlist",
+            "offersList"    : [
+                {
+                    
+                },
+            ]
         }
         
 ## Compare remove product [/product/compare/remove/{productStringId}]
@@ -553,13 +558,18 @@ Wando API - some init info
 + Parameters
     + productStringId (string) - product string identifier, e.g. mac+mini,1234
 
-### Add products in compare [GET]
+### Add products in compare [DELETE]
 
 + Response 200 (application/json)
 
         {
             "status"    : "success",
-            "message"   : ""
+            "message"   : "",
+            "offersList"    : [
+                {
+                    
+                },
+            ]
         }
         
         
