@@ -325,6 +325,33 @@ Wando API - some init info
                 "total_no"  : 25
             }
         }
+        
+        
+## Filters [/product/filters?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&cb={cb}&provider={provider}]
+
++ Parameters
+    + keyword (string, required) - search keyword
+    + min_price (number, optional) - minimum price
+    + max_price (number, optional) - maximum price
+    + main_cat (string, optional) - main category string name
+    + filters (string, optional) - filter offers using parameters
+    + no_auctions (enum["0", "1"], optional)
+        + Default: `0`
+    + cb (enum["0", "1"], optional) - cache breaker, always refresh data
+        + Default: `0`
+    + provider (string, optional) - comma separated provider string identifiers
+
+### Get filters data [GET]
+
++ Response 200 (application/json)
+
+        {
+            "status"    : "success",
+            "filters"   : {
+            
+            }
+        }
+        
 
 ## Product detials [/product/{productStringId}/details]
 
@@ -373,30 +400,6 @@ Wando API - some init info
             }
         }
         
-## Filters [/product/filters?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&cb={cb}&provider={provider}]
-
-+ Parameters
-    + keyword (string, required) - search keyword
-    + min_price (number, optional) - minimum price
-    + max_price (number, optional) - maximum price
-    + main_cat (string, optional) - main category string name
-    + filters (string, optional) - filter offers using parameters
-    + no_auctions (enum["0", "1"], optional)
-        + Default: `0`
-    + cb (enum["0", "1"], optional) - cache breaker, always refresh data
-        + Default: `0`
-    + provider (string, optional) - comma separated provider string identifiers
-
-### Get filters data [GET]
-
-+ Response 200 (application/json)
-
-        {
-            "status"    : "success",
-            "filters"   : {
-            
-            }
-        }
         
 ## Get product redirect url [/product/{productStringId}/redirect]
 
