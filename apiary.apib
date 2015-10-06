@@ -368,9 +368,71 @@ Wando API - some init info
         {
             "status"    : "success",
             "filters"   : {
-                "list"      : {
-                    
-                }
+                "list"      : [
+                    {
+                        "name"      : "Shop",
+                        "kind"      : "other",
+                        "selected"  : false,
+                        "values"    : [
+                            {
+                                "id"            : [
+                                    "me109315"
+                                ],
+                                "name"          : "Crutchfield",
+                                "item_count"    : 4,
+                                "selected"      : false
+                            },
+                            {
+                        "id":[
+                        "me112198"
+                        ],
+                        "name":"Iaqsource.com",
+                        "item_count":1,
+                        "selected":false
+                        }, {
+                            "id": [
+                                "me110229"
+                    ],
+                    "name":"OEMPCWorld.com",
+                    "item_count":4,
+                    "selected":false
+                    }
+                    ],
+                    "id_merge_strategy":"array"
+                    },
+                    {
+                    "name":"Category",
+                    "kind":"other",
+                    "selected":false,
+                    "values":[
+                    {
+                    "id":[
+                    "cat637307"
+                    ],
+                    "name":"Appliances parts & accessories",
+                    "item_count":1,
+                    "selected":false
+                    },
+                    {
+                    "id":[
+                    "cat637143"
+                    ],
+                    "name":"Ram & memory upgrades",
+                    "item_count":4,
+                    "selected":false
+                    },
+                    {
+                    "id":[
+                    "cat637502"
+                    ],
+                    "name":"Recording equipment",
+                    "item_count":4,
+                    "selected":false
+                    }
+                    ],
+                    "id_merge_strategy":"array"
+                    }
+                ]
                 "current"   : {
                     "keyword"       : "mac mini",
                     "main_cat"      : null,
@@ -379,7 +441,7 @@ Wando API - some init info
                     "special_offer" : 0,
                     "min_price"     : 0,
                     "max_price"     : 0,
-                    "sorting"       : null
+                    "sorting"       : "relevance"
                 }
             }
         }
