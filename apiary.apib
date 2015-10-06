@@ -53,20 +53,23 @@ Wando API - some init info
                         "falz"      : "/product/falz",
                         "list"      : "/product/list",
                         "filters"   : "/product/filters",
-                        "details"   : "/product/details/{productStringId}",
+                        "details"   : {
+                            "get"       : "/product/{productStringId}/details",
+                            "review"    : {
+                                "list"      : "/product/{productStringId}/review",
+                                "add"       : "/product/{productStringId}/review"
+                            }
+                            
+                        },
                         "wishlist"  : {
                             "list"      : "/product/wishlist",
-                            "add"       : "/product/wishlist/add/{productStringId}",
-                            "remove"    : "/product/wishlist/remove/{productStringId}"
+                            "add"       : "/product/wishlist/{productStringId}",
+                            "remove"    : "/product/wishlist/{productStringId}"
                         },
                         "compare"   : {
                             "list"      : "/product/compare",
-                            "add"       : "/product/compare/add/{productStringId}",
-                            "remove"    : "/product/compare/remove/{productStringId}"
-                        },
-                        "reviews"   : {
-                            "index"     : "/product/review/{productStringId}",
-                            "add"       : "/product/review/{productStringId}/add"
+                            "add"       : "/product/compare/{productStringId}",
+                            "remove"    : "/product/compare/{productStringId}"
                         }
                     }
                 }
