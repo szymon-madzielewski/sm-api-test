@@ -435,18 +435,6 @@ Wando API - some init info
 
 ### Add products to wishlist [POST]
 
-+ Attributes
-    + username: `sm` (string, required) - current username
-    + comment: `This is my awesome review` (string, required) - user product review comment
-    + rating: 5 (enum[number], required) - user product rating, value form 1 till 5
-        + Default: `5`
-        + Members
-            + `5` - 5
-            + `4` - 4
-            + `3` - 3
-            + `2` - 2
-            + `1` - 1
-
 + Response 200 (application/json)
 
         {
@@ -822,6 +810,19 @@ Wando API - some init info
     + productStringId (string) - product string identifier, e.g. mac+mini,1234
     
 ### Add new review [POST]
+
++ Attributes
+    + username: `sm` (string, required) - current username
+    + comment: `This is my awesome review` (string, required) - user product review comment
+    + rating: 5 (enum[number], required) - user product rating, value form 1 till 5
+        + Default: `5`
+        + Members
+            + `5` - 5
+            + `4` - 4
+            + `3` - 3
+            + `2` - 2
+            + `1` - 1
+
 
 + Response 200 (application/json)
 
