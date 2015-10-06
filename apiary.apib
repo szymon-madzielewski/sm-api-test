@@ -433,13 +433,85 @@ Wando API - some init info
 + Parameters
     + productStringId (string) - product string identifier, e.g. mac+mini,1234
 
-### Add products to wishlist [POST]
+### Add products to wishlist [PUT]
 
 + Response 200 (application/json)
 
         {
             "status"    : "success",
-            "message"   : ""
+            "message"   : "",
+            "wishlist:  : {
+                "total_no"  : 2,
+                "list"      : [
+                    {
+                        "prod_string_id"        : "mac+mini,1234",
+                        "redirect_url"          : "http://wandome.com/landingpage/r?mac+mini,1234",
+                        "index"                 : 0,
+                        "rating"                : 5,
+                        "is_special_prod"       : true,
+                        
+                        "provider"              : "amazon",
+                        "merchant_id"           : "amazon",
+                        "merchant_logo_url"     : "https:\/\/s3.eu-central-1.amazonaws.com\/fe-statics\/images\/amazon_logo_small.jpg",
+                        
+                        "old_price"             : 1665,
+                        "price"                 : "$1,850.00 - 2,449.00",
+                        "price_min"             : 1850,
+                        "price_max"             : 2449,
+                        "discount_percent"      : 10,
+                        "shipping_price"        : "$100",
+                        "price_currency"        : "USD",
+                        
+                        "category_name"         : "Personal Computer",
+                        "title"                 : "Apple iMac MF885LL\/A 27-Inch Desktop (NEWEST VERSION)",
+                        "description"           : "3.3GHz quad-core Intel Core i5. Turbo Boost up to 3.7GHz. 8GB (two 4GB) memory. 1TB hard drive1. AMD Radeon R9 M290 with 2GB video memory. 27\" Retina 5K IPS Display. 5120 x 2880 Native Resolution. 3.3 GHz Intel Core i5 (Haswell). 8GB of 1600 MHz DDR3 RAM. 1TB 7200 rpm Hard Drive. AMD Radeon M290 GPU (2GB GDDR5). 802.11ac Wi-Fi, Bluetooth 4.0. 2x Thunderbolt 2 and 4x USB 3.0 Ports. FaceTime HD Camera, Dual Mics, Speakers. Mac OS X 10.10 Yosemite.",
+                        "valid_until"           : 1444940661,
+                        "brand"                 : "Apple",
+                        "color"                 : [
+                            "silver"
+                        ],
+                        "similar_prod_keyword"  : "Apple iMac MF885LL A 27 Inch",
+                        
+                        "photo"                 : {
+                            "main_url"              : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL.jpg"",
+                            "thumb_url"             : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL._SL160_.jpg"
+                        }
+                    }, {
+                        "prod_string_id"        : "mac+mini,1234",
+                        "redirect_url"          : "http://wandome.com/landingpage/r?mac+mini,1234",
+                        "index"                 : 0,
+                        "rating"                : 5,
+                        "is_special_prod"       : true,
+                        
+                        "provider"              : "amazon",
+                        "merchant_id"           : "amazon",
+                        "merchant_logo_url"     : "https:\/\/s3.eu-central-1.amazonaws.com\/fe-statics\/images\/amazon_logo_small.jpg",
+                        
+                        "old_price"             : 1665,
+                        "price"                 : "$1,850.00 - 2,449.00",
+                        "price_min"             : 1850,
+                        "price_max"             : 2449,
+                        "discount_percent"      : 10,
+                        "shipping_price"        : "$100",
+                        "price_currency"        : "USD",
+                        
+                        "category_name"         : "Personal Computer",
+                        "title"                 : "Apple iMac MF885LL\/A 27-Inch Desktop (NEWEST VERSION)",
+                        "description"           : "3.3GHz quad-core Intel Core i5. Turbo Boost up to 3.7GHz. 8GB (two 4GB) memory. 1TB hard drive1. AMD Radeon R9 M290 with 2GB video memory. 27\" Retina 5K IPS Display. 5120 x 2880 Native Resolution. 3.3 GHz Intel Core i5 (Haswell). 8GB of 1600 MHz DDR3 RAM. 1TB 7200 rpm Hard Drive. AMD Radeon M290 GPU (2GB GDDR5). 802.11ac Wi-Fi, Bluetooth 4.0. 2x Thunderbolt 2 and 4x USB 3.0 Ports. FaceTime HD Camera, Dual Mics, Speakers. Mac OS X 10.10 Yosemite.",
+                        "valid_until"           : 1444940661,
+                        "brand"                 : "Apple",
+                        "color"                 : [
+                            "silver"
+                        ],
+                        "similar_prod_keyword"  : "Apple iMac MF885LL A 27 Inch",
+                        
+                        "photo"                 : {
+                            "main_url"              : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL.jpg"",
+                            "thumb_url"             : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL._SL160_.jpg"
+                        }
+                    }
+                ]
+            }
         }
         
 ## Wishlist remove offer [/product/wishlist/remove/{productStringId}]
