@@ -439,7 +439,7 @@ Wando API - some init info
 + Parameters
     + productStringId (string) - product string identifier, e.g. mac+mini,1234
     
-### Add new review [POST]
+### Add new review [PUT]
 
 + Attributes
     + username: `sm` (string, required) - current username
@@ -462,7 +462,12 @@ Wando API - some init info
             "review"    : {
                 "total_no"  : 1,
                 "list"      : [
-                    
+                    {
+                        "username"  : "sm",
+                        "comment"   : "awesome product!",
+                        "rating"    : 5,
+                        ""
+                    }
                 ]
             }
         }
