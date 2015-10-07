@@ -11,16 +11,7 @@ Wando API - some init info
 ### Init session data [POST]
 
 + Attributes
-    + username: `sm` (string, required) - current username
-    + comment: `This is my awesome review` (string, required) - user product review comment
-    + rating: 5 (enum[number], required) - user product rating, value form 1 till 5
-        + Default: `5`
-        + Members
-            + `5` - 5
-            + `4` - 4
-            + `3` - 3
-            + `2` - 2
-            + `1` - 1
+    + inbound_url: `http://www.pricedetective.net/product?adgr=dolce_gusto_melody_3&camp=Cleaned_first5_5to4LastWords_5&fallbackKeyword=&gclid=CJe09YCkocgCFQIFwwodgdMGaA&keyword=dolce%20gusto%20melody%203&kwb=%5Bdolce%20gusto%20melody%203%5D&mainCat=&subCat=&subSubCat=` (string, required) - user entry url (full url with domain and all parameters)
 
 + Response 200 (application/json)
 
