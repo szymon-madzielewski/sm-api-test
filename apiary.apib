@@ -21,6 +21,28 @@ Wando API - some init info
         }
 
 
+# Group Clickout
+
+## Init [/clickout/add]
+
+### add clickout data [POST]
+
++ Attributes
+    + `offer_string_id`: `mac+mini,1234` (string, required) - offer string id
+    + `clickout_type_id`: `1` - clickout type, element on page that was used for clickout (debugger clickout)
+    + `data_provider`: `become` - provider string id
+    + `main_category`: `clothing` - main category name
+    + `keyword`: `mac+mini` - keyword used to get product
+    + `display_index`: `1` - product position on page
+
++ Response 200 (application/json)
+
+        {
+            "status"        : "success",
+            "redirect_url"  : ""
+        }
+
+
 # Group Pages
 
 ## Init [/page/init]
