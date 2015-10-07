@@ -28,14 +28,18 @@ Wando API - some init info
 ### add clickout data [POST]
 
 + Attributes
-    + `offer_string_id`: `mac+mini,1234` (string, required) - offer string id
-    + `clickout_type_id`: `1` (number, required) - clickout type, element on page that was used for clickout (debugger clickout)
+    
+    + `clickout_type_id`: `1` (number, optional) - clickout type, element on page that was used for clickout (debugger clickout)
+        + default: `1`
     + `data_provider`: `become` (string, required) - provider string id
     + `main_category`: `clothing` (string, optional) - main category name
     + `keyword`: `mac+mini` (string, required) - keyword used to get product
     + `display_index`: `1` (number, required) - product position on page
-    + `offer`
-        + `name`: `fsfsdfs` (string, required) - aaa
+    
+    + `offer_string_id`: `mac+mini,1234` (string, required) - offer string id
+    + `offer_merchant_id`
+    + `offer_title`
+    + `offer_brand`
 
 + Response 200 (application/json)
 
