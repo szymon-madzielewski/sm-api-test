@@ -687,14 +687,14 @@ Wando API - some init info
         + Default: `0`
     + provider (string, optional) - comma separated provider string identifiers
 
-### Get products list [GET]
+### Get offers list [GET]
 
 + Response 200 (application/json)
 
         {
             "status"    : "success",
             "data"      : {
-                "products"  : {
+                "offers"    : {
                     "list"      : [
                         {
                             "offer_string_id"        : "mac+mini,1234",
@@ -975,8 +975,8 @@ Wando API - some init info
 
 + Attributes
     + `username`: `sm` (string, required) - current username
-    + `comment`: `This is my awesome review` (string, required) - user product review comment
-    + `rating`: 5 (enum[number], required) - user product rating, value form 1 till 5
+    + `comment`: `This is my awesome review` (string, required) - user offer review comment
+    + `rating`: 5 (enum[number], required) - user offer rating, value form 1 till 5
         + Default: `5`
         + Members
             + `5` - 5
@@ -1013,9 +1013,9 @@ Wando API - some init info
 
 
 
-## Wishlist get offer list [/product/wishlist]
+## Wishlist get offer list [/offer/wishlist]
 
-### Get products in wishlist [GET]
+### Get offers in wishlist [GET]
 
 + Response 200 (application/json)
 
@@ -1189,7 +1189,7 @@ Wando API - some init info
         }
 
 
-### Remove products from wishlist [DELETE]
+### Remove offers from wishlist [DELETE]
 
 + Response 200 (application/json)
 
@@ -1361,7 +1361,7 @@ Wando API - some init info
             }
         }
         
-## Compare add new product [/offer/compare/{offerStringId}]
+## Compare add new offer [/offer/compare/{offerStringId}]
 
 + Parameters
     + offerStringId (string) - offer string identifier, e.g. mac+mini,1234
