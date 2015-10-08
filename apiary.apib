@@ -1366,26 +1366,26 @@ Wando API - some init info
 + Parameters
     + offerStringId (string) - offer string identifier, e.g. mac+mini,1234
 
-### Add products in compare [PUT]
+### Add offer in compare [PUT]
 
 + Response 200 (application/json)
 
         {
             "status"    : "success",
-            "message"   : "Product added to the compare list",
+            "message"   : "Offer added to the compare list",
             "data"      : {
                 "compare"   : {
                     "added"     : {
-                        "product_string_id" : "mac=mini,1234"
+                        "offer_string_id" : "mac=mini,1234"
                     },
                     "total_no"  : 2,
                     "list"      : [
                         {
-                            "prod_string_id"        : "mac+mini,1234",
+                            "offer_string_id"       : "mac+mini,1234",
                             "redirect_url"          : "http://wandome.com/landingpage/r?mac+mini,1234",
                             "display_index"         : 0,
                             "rating"                : 5,
-                            "is_special_prod"       : true,
+                            "is_special_offer"      : true,
                             
                             "provider"              : "Amazon",
                             "merchant_id"           : "amazon",
