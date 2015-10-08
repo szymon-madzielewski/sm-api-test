@@ -35,10 +35,10 @@ Wando API - some init info
 ### add clickout data [POST]
 
 + Attributes
-    + `product_string_id`: `mac+mini,1234` (string, required) - product string id
+    + `offer_string_id`: `mac+mini,1234` (string, required) - product string id
     + `data_provider`: `become` (string, required) - provider string id
-    + `keyword`: `mac+mini` (string, required) - keyword used to get product
-    + `display_index`: `0` (number, required) - product position on page
+    + `keyword`: `mac+mini` (string, required) - keyword used to get offers
+    + `display_index`: `0` (number, required) - offer position on page
     + `main_category`: `clothing` (string, optional) - main category name
     + `filters` (string, optional) - current filters list
     + `clickout_type_id`: `1` (number, optional) - clickout type, element on page that was used for clickout (debugger clickout)
@@ -70,10 +70,10 @@ Wando API - some init info
                 "category_data" : [
                     {
                         "name"          : "Cars and Accessories",
-                        "clickout_url"  : "/product/falz?main_cat=cars+and+accessories"
+                        "clickout_url"  : "/offer/falz?main_cat=cars+and+accessories"
                     }, {
                         "name"          : "Clothing and Accessories",
-                        "clickout_url"  : "/product/falz?main_cat=clothing+and+accessories"
+                        "clickout_url"  : "/offer/falz?main_cat=clothing+and+accessories"
                     }
                 ],
                 "lang": {
@@ -98,27 +98,27 @@ Wando API - some init info
                             "beauty"        : "/page/guide/beauty"
                         }
                     },
-                    "product": {
-                        "falz"      : "/product/falz",
-                        "list"      : "/product/list",
-                        "filters"   : "/product/filters",
+                    "offer": {
+                        "falz"      : "/offer/falz",
+                        "list"      : "/offer/list",
+                        "filters"   : "/offer/filters",
                         "details"   : {
-                            "get"       : "/product/{productStringId}/details",
+                            "get"       : "/offer/{offerStringId}/details",
                             "review"    : {
-                                "list"      : "/product/{productStringId}/review",
-                                "add"       : "/product/{productStringId}/review"
+                                "list"      : "/offer/{offerStringId}/review",
+                                "add"       : "/offer/{offerStringId}/review"
                             }
                             
                         },
                         "wishlist"  : {
-                            "list"      : "/product/wishlist",
-                            "add"       : "/product/wishlist/{productStringId}",
-                            "remove"    : "/product/wishlist/{productStringId}"
+                            "list"      : "/offer/wishlist",
+                            "add"       : "/offer/wishlist/{offerStringId}",
+                            "remove"    : "/offer/wishlist/{offerStringId}"
                         },
                         "compare"   : {
-                            "list"      : "/product/compare",
-                            "add"       : "/product/compare/{productStringId}",
-                            "remove"    : "/product/compare/{productStringId}"
+                            "list"      : "/offer/compare",
+                            "add"       : "/offer/compare/{offerStringId}",
+                            "remove"    : "/offer/compare/{offerStringId}"
                         }
                     }
                 }
@@ -177,86 +177,86 @@ Wando API - some init info
                 "category"  : [
                     {
                         "title"         : "Computers, Electronics & Office",
-                        "clickout_url"  : "/product/falz?keyword=imac",
+                        "clickout_url"  : "/offer/falz?keyword=imac",
                         "sub"           : [
                             {
                                 "title"         : "Computers",
-                                "clickout_url"  : "/product/falz?keyword=macbook",
+                                "clickout_url"  : "/offer/falz?keyword=macbook",
                             }, {
                                 "title"         : "Electronics",
-                                "clickout_url"  : "/product/falz?keyword=lg+led",
+                                "clickout_url"  : "/offer/falz?keyword=lg+led",
                             }, {
                                 "title"         : "Office",
-                                "clickout_url"  : "/product/falz?keyword=printer+hp",
+                                "clickout_url"  : "/offer/falz?keyword=printer+hp",
                             }
                         ]
                     }, {
                         "title"         : "Media",
-                        "clickout_url"  : "/product/falz?keyword=headphones",
+                        "clickout_url"  : "/offer/falz?keyword=headphones",
                         "sub"           : [
                             {
                                 "title"         : "Video Gaming",
-                                "clickout_url"  : "/product/falz?keyword=playstation",
+                                "clickout_url"  : "/offer/falz?keyword=playstation",
                             }, {
                                 "title"         : "Magazine and Subscriptions",
-                                "clickout_url"  : "/product/falz?keyword=national+geographic",
+                                "clickout_url"  : "/offer/falz?keyword=national+geographic",
                             }, {
                                 "title"         : "Media",
-                                "clickout_url"  : "/product/falz?keyword=headphones",
+                                "clickout_url"  : "/offer/falz?keyword=headphones",
                             }
                         ]
                     }, {
                         "title"         : "House, Kids & Garden",
-                        "clickout_url"  : "/product/falz?keyword=garden+pool",
+                        "clickout_url"  : "/offer/falz?keyword=garden+pool",
                         "sub"           : [
                             {
                                 "title"         : "Home and Garden",
-                                "clickout_url"  : "/product/falz?keyword=garden+furniture+set",
+                                "clickout_url"  : "/offer/falz?keyword=garden+furniture+set",
                             }, {
                                 "title"         : "Kids and Family",
-                                "clickout_url"  : "/product/falz?keyword=lego",
+                                "clickout_url"  : "/offer/falz?keyword=lego",
                             }, {
                                 "title"         : "Miscellaneous",
-                                "clickout_url"  : "/product/falz?keyword=chair",
+                                "clickout_url"  : "/offer/falz?keyword=chair",
                             }
                         ]
                     }, {
                         "title"         : "Fashion, Gifts, & Accessories",
-                        "clickout_url"  : "/product/falz?keyword=converse+allstar",
+                        "clickout_url"  : "/offer/falz?keyword=converse+allstar",
                         "sub"           : [
                             {
                                 "title"         : "Clothing and Accessories",
-                                "clickout_url"  : "/product/falz?keyword=jeans",
+                                "clickout_url"  : "/offer/falz?keyword=jeans",
                             }, {
                                 "title"         : "Jewelry and Watches",
-                                "clickout_url"  : "/product/falz?keyword=rolex",
+                                "clickout_url"  : "/offer/falz?keyword=rolex",
                             }, {
                                 "title"         : "Flowers and Gifts",
-                                "clickout_url"  : "/product/falz?keyword=plant",
+                                "clickout_url"  : "/offer/falz?keyword=plant",
                             }
                         ]
                     }, {
                         "title"         : "Sports & Leisure",
-                        "clickout_url"  : "/product/falz?keyword=rollerblade",
+                        "clickout_url"  : "/offer/falz?keyword=rollerblade",
                         "sub"           : [
                             {
                                 "title"         : "Sports and Outdoors",
-                                "clickout_url"  : "/product/falz?keyword=rollerblade",
+                                "clickout_url"  : "/offer/falz?keyword=rollerblade",
                             }, {
                                 "title"         : "Cars and Accessories",
-                                "clickout_url"  : "/product/falz?keyword=nav+tomtom",
+                                "clickout_url"  : "/offer/falz?keyword=nav+tomtom",
                             }, {
                                 "title"         : "Musical Instruments & Accessories",
-                                "clickout_url"  : "/product/falz?keyword=guitar",
+                                "clickout_url"  : "/offer/falz?keyword=guitar",
                             }
                         ]
                     }, {
                         "title"         : "Health & Beauty",
-                        "clickout_url"  : "/product/falz?keyword=loreal cream",
+                        "clickout_url"  : "/offer/falz?keyword=loreal cream",
                         "sub"           : [
                             {
                                 "title"         : "Health and Beauty",
-                                "clickout_url"  : "/product/falz?keyword=loreal+cream",
+                                "clickout_url"  : "/offer/falz?keyword=loreal+cream",
                             }
                         ]
                     }
@@ -279,22 +279,22 @@ Wando API - some init info
                 "shops"     : [
                     {
                         "type"          : "ebay",
-                        "clickout_url"  : "/product/falz?keyword=ebay"
+                        "clickout_url"  : "/offer/falz?keyword=ebay"
                     }, {
                         "type"          : "ebay",
-                        "clickout_url"  : "/product/falz?keyword=sears"
+                        "clickout_url"  : "/offer/falz?keyword=sears"
                     }, {
                         "type"          : "wayfair",
-                        "clickout_url"  : "/product/falz?keyword=wayfair"
+                        "clickout_url"  : "/offer/falz?keyword=wayfair"
                     }, {
                         "type"          : "target",
-                        "clickout_url"  : "/product/falz?keyword=target"
+                        "clickout_url"  : "/offer/falz?keyword=target"
                     }, {
                         "type"          : "amazon",
-                        "clickout_url"  : "/product/falz?keyword=amazon"
+                        "clickout_url"  : "/offer/falz?keyword=amazon"
                     }, {
                         "type"          : "zappos",
-                        "clickout_url"  : "/product/falz?keyword=zappos"
+                        "clickout_url"  : "/offer/falz?keyword=zappos"
                     }
                 ]
             }
@@ -442,9 +442,9 @@ Wando API - some init info
                 },
                 "product"   : {
                     "search_keyword"    : "led television",
-                    "products_no"       : 14,
-                    "list_url"          : "/product/list?keyword=led+television&per_page=14",
-                    "clickout_url"      : "/product/list?keyword=led+television"
+                    "offers_no"         : 14,
+                    "list_url"          : "/offer/list?keyword=led+television&per_page=14",
+                    "clickout_url"      : "/offer/list?keyword=led+television"
                 },
                 "guides"    : {
                     "banners"   : [
@@ -494,11 +494,11 @@ Wando API - some init info
                         "sixth"     : "Of course, any garden involves some basic spade work, and you'll find all the tools and implements you require right here in the Garden section. Choose forks and spades for larger areas, or pick small forks and trowels for petite gardens or planters. It's so much easier to get down to the basic hard work when you're dressed for the job, so be sure to take a look at the great range of gardening aprons, gloves and jackets in the Garden category, too."
                     }
                 },
-                "product"   : {
+                "offers"   : {
                     "search_keyword"    : "garden furniture set",
-                    "products_no"       : 14,
-                    "list_url"          : "/product/list?keyword=garden+furniture+set&per_page=14",
-                    "clickout_url"      : "/product/list?keyword=garden+furniture+set"
+                    "offers_no"         : 14,
+                    "list_url"          : "/offer/list?keyword=garden+furniture+set&per_page=14",
+                    "clickout_url"      : "/offer/list?keyword=garden+furniture+set"
                 },
                 "guides"    : {
                     "banners"   : [
@@ -548,11 +548,11 @@ Wando API - some init info
                         "sixth"     : "The outdoors presents many challenges for the unprepared. That's why we have gathered together the things that lovers of the outdoors will need. Whether you intend to abseil, climb or cycle long distances, we have outdoor accessories to meet everyone's needs. :host have created an easy to use, comprehensive way to search through auctions and sales that are taking place across the internet. That way, nobody can miss out on the ideal cycling helmet or climbing ropes. Ensuring that you are prepared for outdoor recreation has never been easier. If you are serious about outdoor activities and have to stock up, the range of goods available from :host will cover every eventuality, from hunters to fishing lovers."
                     }
                 },
-                "product"   : {
+                "offers"   : {
                     "search_keyword"    : "rollerblade",
-                    "products_no"       : 14,
-                    "list_url"          : "/product/list?keyword=rollerblade&per_page=14",
-                    "clickout_url"      : "/product/list?keyword=rollerblade"
+                    "offers_no"         : 14,
+                    "list_url"          : "/offer/list?keyword=rollerblade&per_page=14",
+                    "clickout_url"      : "/offer/list?keyword=rollerblade"
                 },
                 "guides"    : {
                     "banners"   : [
@@ -606,9 +606,9 @@ Wando API - some init info
                 },
                 "product"   : {
                     "search_keyword"    : "eyeliner",
-                    "products_no"       : 14,
-                    "list_url"          : "/product/list?keyword=eyeliner&per_page=14",
-                    "clickout_url"      : "/product/list?keyword=eyeliner"
+                    "offers_no"         : 14,
+                    "list_url"          : "/offer/list?keyword=eyeliner&per_page=14",
+                    "clickout_url"      : "/offer/list?keyword=eyeliner"
                 },
                 "guides"    : {
                     "banners"   : [
@@ -631,9 +631,9 @@ Wando API - some init info
         }
 
 
-# Group Products
+# Group Offer
 
-## Products falz page [/product/falz?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}]
+## Offers falz page [/offer/falz?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}]
 
 + Parameters
     + keyword (string, required) - search keyword
@@ -661,13 +661,13 @@ Wando API - some init info
             "status"        : "success",
             "data"          : {
                 "product_url"   : {
-                    "list_url"      : "/product/list?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}",
-                    "filters_url"   : "/product/filters?keyword={keyword}"
+                    "list_url"      : "/offer/list?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}",
+                    "filters_url"   : "/offer/filters?keyword={keyword}"
                 }
             }
         }
         
-## Products list [/product/list?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}]
+## Offers list [/offer/list?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}]
 
 + Parameters
     + keyword (string, required) - search keyword
@@ -697,11 +697,11 @@ Wando API - some init info
                 "products"  : {
                     "list"      : [
                         {
-                            "prod_string_id"        : "mac+mini,1234",
+                            "offer_string_id"        : "mac+mini,1234",
                             "redirect_url"          : "http://wandome.com/landingpage/r?mac+mini,1234",
                             "display_index"         : 0,
                             "rating"                : 5,
-                            "is_special_prod"       : true,
+                            "is_special_offer"      : true,
                             
                             "provider"              : "Amazon",
                             "merchant_id"           : "amazon",
@@ -723,18 +723,18 @@ Wando API - some init info
                             "color"                 : [
                                 "silver"
                             ],
-                            "similar_prod_keyword"  : "Apple iMac MF885LL A 27 Inch",
+                            "similar_offer_keyword" : "Apple iMac MF885LL A 27 Inch",
                             
                             "photo"                 : {
                                 "main_url"              : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL.jpg",
                                 "thumb_url"             : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL._SL160_.jpg"
                             }
                         }, {
-                            "prod_string_id"        : "mac+mini,1234",
+                            "offer_string_id"        : "mac+mini,1234",
                             "redirect_url"          : "http://wandome.com/landingpage/r?mac+mini,1234",
                             "display_index"         : 1,
                             "rating"                : 5,
-                            "is_special_prod"       : true,
+                            "is_special_offer"      : true,
                             
                             "provider"              : "Amazon",
                             "merchant_id"           : "amazon",
@@ -756,7 +756,7 @@ Wando API - some init info
                             "color"                 : [
                                 "silver"
                             ],
-                            "similar_prod_keyword"  : "Apple iMac MF885LL A 27 Inch",
+                            "similar_offer_keyword" : "Apple iMac MF885LL A 27 Inch",
                             
                             "photo"                 : {
                                 "main_url"              : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL.jpg",
@@ -792,7 +792,7 @@ Wando API - some init info
         }
         
         
-## Filters [/product/filters?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&cb={cb}&provider={provider}]
+## Filters [/offer/filters?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&cb={cb}&provider={provider}]
 
 + Parameters
     + keyword (string, required) - search keyword
@@ -833,7 +833,7 @@ Wando API - some init info
                                         "me109315"
                                     ],
                                     "name"          : "Crutchfield",
-                                    "product_count" : 4,
+                                    "offer_count"   : 4,
                                     "selected"      : true
                                 },
                                 {
@@ -841,14 +841,14 @@ Wando API - some init info
                                         "me112198"
                                     ],
                                     "name"          : "Iaqsource.com",
-                                    "product_count" : 1,
+                                    "offer_count"   : 1,
                                     "selected"      : false
                                 }, {
                                     "id": [
                                         "me110229"
                                     ],
                                     "name"          : "OEMPCWorld.com",
-                                    "product_count" : 4,
+                                    "offer_count"   : 4,
                                     "selected"      : false
                                 }
                             ]
@@ -862,7 +862,7 @@ Wando API - some init info
                                         "cat637307"
                                     ],
                                     "name"          : "Appliances parts & accessories",
-                                    "product_count" : 1,
+                                    "offer_count"   : 1,
                                     "selected"      : true
                                 },
                                 {
@@ -870,7 +870,7 @@ Wando API - some init info
                                         "cat637143"
                                     ],
                                     "name"          : "Ram & memory upgrades",
-                                    "product_count" : 4,
+                                    "offer_count"   : 4,
                                     "selected"      : false
                                 },
                                 {
@@ -878,7 +878,7 @@ Wando API - some init info
                                         "cat637502"
                                     ],
                                     "name"          : "Recording equipment",
-                                    "product_count" : 4,
+                                    "offer_count"   : 4,
                                     "selected"      : false
                                 }
                             ]
@@ -889,24 +889,24 @@ Wando API - some init info
         }
         
 
-## Product detials [/product/{productStringId}/details]
+## Offer detials [/offer/{offerStringId}/details]
 
 + Parameters
-    + productStringId (string) - product string identifier, e.g. mac+mini,1234
+    + offerStringId (string) - offer string identifier, e.g. mac+mini,1234
 
-### Get single product details [GET]
+### Get single offer details [GET]
 
 + Response 200 (application/json)
 
         {
             "status"    : "success",
             "data"      : {
-                "product"   : {
-                    "prod_string_id"        : "mac+mini,1234",
+                "offer"   : {
+                    "offer_string_id"       : "mac+mini,1234",
                     "redirect_url"          : "http://wandome.com/landingpage/r?mac+mini,1234",
                     "display_index"         : 0,
                     "rating"                : 5,
-                    "is_special_prod"       : true,
+                    "is_special_offer"      : true,
                     
                     "provider"              : "Amazon",
                     "merchant_id"           : "amazon",
@@ -928,7 +928,7 @@ Wando API - some init info
                     "color"                 : [
                         "silver"
                     ],
-                    "similar_prod_keyword"  : "Apple iMac MF885LL A 27 Inch",
+                    "similar_offer_keyword" : "Apple iMac MF885LL A 27 Inch",
                     
                     "photo"                 : {
                         "main_url"              : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL.jpg",
@@ -940,10 +940,10 @@ Wando API - some init info
         
 
 
-## Product review [/product/{productStringId}/review]
+## Offer review [/offer/{offerStringId}/review]
 
 + Parameters
-    + productStringId (string) - product string identifier, e.g. mac+mini,1234
+    + offerStringId (string) - offer string identifier, e.g. mac+mini,1234
 
 ### Get reviews list [GET]
 
@@ -1013,7 +1013,7 @@ Wando API - some init info
 
 
 
-## Wishlist get products list [/product/wishlist]
+## Wishlist get offer list [/product/wishlist]
 
 ### Get products in wishlist [GET]
 
@@ -1026,11 +1026,11 @@ Wando API - some init info
                     "total_no"  : 2,
                     "list"      : [
                         {
-                            "prod_string_id"        : "mac+mini,1234",
+                            "offer_string_id"       : "mac+mini,1234",
                             "redirect_url"          : "http://wandome.com/landingpage/r?mac+mini,1234",
                             "display_index"         : 0,
                             "rating"                : 5,
-                            "is_special_prod"       : true,
+                            "is_special_offer"      : true,
                             
                             "provider"              : "Amazon",
                             "merchant_id"           : "amazon",
@@ -1052,18 +1052,18 @@ Wando API - some init info
                             "color"                 : [
                                 "silver"
                             ],
-                            "similar_prod_keyword"  : "Apple iMac MF885LL A 27 Inch",
+                            "similar_offer_keyword" : "Apple iMac MF885LL A 27 Inch",
                             
                             "photo"                 : {
                                 "main_url"              : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL.jpg",
                                 "thumb_url"             : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL._SL160_.jpg"
                             }
                         }, {
-                            "prod_string_id"        : "mac+mini,1234",
+                            "offer_string_id"       : "mac+mini,1234",
                             "redirect_url"          : "http://wandome.com/landingpage/r?mac+mini,1234",
                             "display_index"         : 1,
                             "rating"                : 5,
-                            "is_special_prod"       : true,
+                            "is_special_offer"      : true,
                             
                             "provider"              : "Amazon",
                             "merchant_id"           : "amazon",
@@ -1085,7 +1085,7 @@ Wando API - some init info
                             "color"                 : [
                                 "silver"
                             ],
-                            "similar_prod_keyword"  : "Apple iMac MF885LL A 27 Inch",
+                            "similar_offer_keyword" : "Apple iMac MF885LL A 27 Inch",
                             
                             "photo"                 : {
                                 "main_url"              : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL.jpg",
@@ -1097,31 +1097,31 @@ Wando API - some init info
             }
         }
         
-## Wishlist add new product [/product/wishlist/{productStringId}]
+## Wishlist add new offer [/offer/wishlist/{offerStringId}]
 
 + Parameters
-    + productStringId (string) - product string identifier, e.g. mac+mini,1234
+    + offerStringId (string) - offer string identifier, e.g. mac+mini,1234
 
-### Add products to wishlist [PUT]
+### Add offer to wishlist [PUT]
 
 + Response 200 (application/json)
 
         {
             "status"    : "success",
-            "message"   : "Product added to wishlist",
+            "message"   : "Offer added to wishlist",
             "data"      : {
                 "wishlist:  : {
                     "added"     : {
-                        "product_string_id" : "mac=mini,1234"
+                        "offer_string_id" : "mac=mini,1234"
                     },
                     "total_no"  : 2,
                     "list"      : [
                         {
-                            "prod_string_id"        : "mac+mini,1234",
+                            "offer_string_id"       : "mac+mini,1234",
                             "redirect_url"          : "http://wandome.com/landingpage/r?mac+mini,1234",
                             "display_index"         : 0,
                             "rating"                : 5,
-                            "is_special_prod"       : true,
+                            "is_special_offer"      : true,
                             
                             "provider"              : "Amazon",
                             "merchant_id"           : "amazon",
@@ -1143,18 +1143,18 @@ Wando API - some init info
                             "color"                 : [
                                 "silver"
                             ],
-                            "similar_prod_keyword"  : "Apple iMac MF885LL A 27 Inch",
+                            "similar_offer_keyword" : "Apple iMac MF885LL A 27 Inch",
                             
                             "photo"                 : {
                                 "main_url"              : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL.jpg",
                                 "thumb_url"             : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL._SL160_.jpg"
                             }
                         }, {
-                            "prod_string_id"        : "mac+mini,1234",
+                            "offer_string_id"       : "mac+mini,1234",
                             "redirect_url"          : "http://wandome.com/landingpage/r?mac+mini,1234",
                             "display_index"         : 1,
                             "rating"                : 5,
-                            "is_special_prod"       : true,
+                            "is_special_offer"      : true,
                             
                             "provider"              : "Amazon",
                             "merchant_id"           : "amazon",
@@ -1176,7 +1176,7 @@ Wando API - some init info
                             "color"                 : [
                                 "silver"
                             ],
-                            "similar_prod_keyword"  : "Apple iMac MF885LL A 27 Inch",
+                            "similar_offer_keyword" : "Apple iMac MF885LL A 27 Inch",
                             
                             "photo"                 : {
                                 "main_url"              : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL.jpg",
@@ -1195,20 +1195,20 @@ Wando API - some init info
 
         {
             "status"    : "success",
-            "message"   : "Product removed from wishlist",
+            "message"   : "Offer removed from wishlist",
             "data"      : {
                 "wishlist"  : {
                     "removed"   : {
-                        "product_string_id" : "mac=mini,1234"
+                        "offer_string_id" : "mac=mini,1234"
                     },
                     "total_no"  : 2,
                     "list"      : [
                         {
-                            "prod_string_id"        : "mac+mini,1234",
+                            "offer_string_id"       : "mac+mini,1234",
                             "redirect_url"          : "http://wandome.com/landingpage/r?mac+mini,1234",
                             "display_index"         : 0,
                             "rating"                : 5,
-                            "is_special_prod"       : true,
+                            "is_special_offer"      : true,
                             
                             "provider"              : "Amazon",
                             "merchant_id"           : "amazon",
@@ -1230,18 +1230,18 @@ Wando API - some init info
                             "color"                 : [
                                 "silver"
                             ],
-                            "similar_prod_keyword"  : "Apple iMac MF885LL A 27 Inch",
+                            "similar_offer_keyword" : "Apple iMac MF885LL A 27 Inch",
                             
                             "photo"                 : {
                                 "main_url"              : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL.jpg",
                                 "thumb_url"             : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL._SL160_.jpg"
                             }
                         }, {
-                            "prod_string_id"        : "mac+mini,1234",
+                            "offer_string_id"       : "mac+mini,1234",
                             "redirect_url"          : "http://wandome.com/landingpage/r?mac+mini,1234",
                             "display_index"         : 1,
                             "rating"                : 5,
-                            "is_special_prod"       : true,
+                            "is_special_offer"      : true,
                             
                             "provider"              : "Amazon",
                             "merchant_id"           : "amazon",
@@ -1263,7 +1263,7 @@ Wando API - some init info
                             "color"                 : [
                                 "silver"
                             ],
-                            "similar_prod_keyword"  : "Apple iMac MF885LL A 27 Inch",
+                            "similar_offer_keyword" : "Apple iMac MF885LL A 27 Inch",
                             
                             "photo"                 : {
                                 "main_url"              : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL.jpg",
@@ -1277,9 +1277,9 @@ Wando API - some init info
 
 
 
-## Compare get products list [/product/compare]
+## Compare get offers list [/offer/compare]
 
-### Get products in compare [GET]
+### Get offers in compare [GET]
 
 + Response 200 (application/json)
 
@@ -1290,11 +1290,11 @@ Wando API - some init info
                     "total_no"  : 2,
                     "list"      : {
                                             {
-                            "prod_string_id"        : "mac+mini,1234",
+                            "offer_string_id"       : "mac+mini,1234",
                             "redirect_url"          : "http://wandome.com/landingpage/r?mac+mini,1234",
                             "display_index"         : 0,
                             "rating"                : 5,
-                            "is_special_prod"       : true,
+                            "is_special_offer"      : true,
                             
                             "provider"              : "Amazon",
                             "merchant_id"           : "amazon",
@@ -1316,18 +1316,18 @@ Wando API - some init info
                             "color"                 : [
                                 "silver"
                             ],
-                            "similar_prod_keyword"  : "Apple iMac MF885LL A 27 Inch",
+                            "similar_offer_keyword" : "Apple iMac MF885LL A 27 Inch",
                             
                             "photo"                 : {
                                 "main_url"              : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL.jpg",
                                 "thumb_url"             : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL._SL160_.jpg"
                             }
                         }, {
-                            "prod_string_id"        : "mac+mini,1234",
+                            "offer_string_id"       : "mac+mini,1234",
                             "redirect_url"          : "http://wandome.com/landingpage/r?mac+mini,1234",
                             "display_index"         : 1,
                             "rating"                : 5,
-                            "is_special_prod"       : true,
+                            "is_special_offer"      : true,
                             
                             "provider"              : "Amazon",
                             "merchant_id"           : "amazon",
@@ -1349,7 +1349,7 @@ Wando API - some init info
                             "color"                 : [
                                 "silver"
                             ],
-                            "similar_prod_keyword"  : "Apple iMac MF885LL A 27 Inch",
+                            "similar_offer_keyword" : "Apple iMac MF885LL A 27 Inch",
                             
                             "photo"                 : {
                                 "main_url"              : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL.jpg",
