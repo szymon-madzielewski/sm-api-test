@@ -35,7 +35,7 @@ Wando API - some init info
 ### add clickout data [POST]
 
 + Attributes
-    + `offer_string_id`: `mac+mini,1234` (string, required) - product string id
+    + `offer_string_id`: `mac+mini,1234` (string, required) - offer string id
     + `data_provider`: `become` (string, required) - provider string id
     + `keyword`: `mac+mini` (string, required) - keyword used to get offers
     + `display_index`: `0` (number, required) - offer position on page
@@ -440,7 +440,7 @@ Wando API - some init info
                         "third"     : "If you love video games of any genre, you can find all your favorite first-person shooter, role-playing or strategy versions online. Using a price comparison chart, you can find the video game, Playstation game, PC Game, Wii Game, Xbox Game and accessories at the best value, just by going to a single website. There is no need to jump from website to website, searching through numerous listings to find what you want! Searching for products across shopping websites can take a lot of time and it often takes a few days or a week to find exactly what you want at the price you desire. Using the Video Games filter you simply enter the name of the product that you want and view a list of prices from thousands of different online retailers. Using an online price comparison makes shopping fun and easy for any avid gamer. By searching the Video Games category to find the item you are looking for. Alternatively you can search for items in the price category that you want. Online price comparison charts ensure you won't miss sale prices and low price deals. Join millions of consumers who use online shopping to make their retail experience faster and more efficient, allowing them to find not only the video games that they love, but to get them at the best possible value with the minimum of stress and hassle. Online shopping can be just as time-consuming as going from door-to-door but by using the Video Games filter you can find your beloved versions simply and quickly, and take advantage of special deals being offered that you may not have been aware of."
                     }
                 },
-                "product"   : {
+                "offers"   : {
                     "search_keyword"    : "led television",
                     "offers_no"         : 14,
                     "list_url"          : "/offer/list?keyword=led+television&per_page=14",
@@ -604,7 +604,7 @@ Wando API - some init info
                         "eighth"    : "Finding special offers using the clothing category Special Offers filter function is lightning fast and a lot of fun; simply browse through the offers, filter them by different characteristics, select those products you find most interesting and order them at one of our partner shops, then just sit back and wait for your beautiful parcels to arrive."
                     }
                 },
-                "product"   : {
+                "offers"   : {
                     "search_keyword"    : "eyeliner",
                     "offers_no"         : 14,
                     "list_url"          : "/offer/list?keyword=eyeliner&per_page=14",
@@ -660,7 +660,7 @@ Wando API - some init info
         {
             "status"        : "success",
             "data"          : {
-                "product_url"   : {
+                "offer_url"   : {
                     "list_url"      : "/offer/list?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}",
                     "filters_url"   : "/offer/filters?keyword={keyword}"
                 }
@@ -1452,26 +1452,26 @@ Wando API - some init info
             }
         }
 
-### Remove products from compare [DELETE]
+### Remove offer from compare [DELETE]
 
 + Response 200 (application/json)
 
         {
             "status"    : "success",
-            "message"   : "Product removed from compare list",
+            "message"   : "Offer was removed from compare list",
             "data"      : {
                 "compare"   : {
                     "removed"   : {
-                        "product_string_id" : "mac=mini,1234"
+                        "offer_string_id" : "mac=mini,1234"
                     },
                     "total_no"  : 2,
                     "list"      : [
                         {
-                            "prod_string_id"        : "mac+mini,1234",
+                            "offer_string_id"       : "mac+mini,1234",
                             "redirect_url"          : "http://wandome.com/landingpage/r?mac+mini,1234",
                             "display_index"         : 0,
                             "rating"                : 5,
-                            "is_special_prod"       : true,
+                            "is_special_offer"      : true,
                             
                             "provider"              : "Amazon",
                             "merchant_id"           : "amazon",
@@ -1493,18 +1493,18 @@ Wando API - some init info
                             "color"                 : [
                                 "silver"
                             ],
-                            "similar_prod_keyword"  : "Apple iMac MF885LL A 27 Inch",
+                            "similar_offer_keyword" : "Apple iMac MF885LL A 27 Inch",
                             
                             "photo"                 : {
                                 "main_url"              : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL.jpg",
                                 "thumb_url"             : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL._SL160_.jpg"
                             }
                         }, {
-                            "prod_string_id"        : "mac+mini,1234",
+                            "offer_string_id"       : "mac+mini,1234",
                             "redirect_url"          : "http://wandome.com/landingpage/r?mac+mini,1234",
                             "display_index"         : 1,
                             "rating"                : 5,
-                            "is_special_prod"       : true,
+                            "is_special_offer"      : true,
                             
                             "provider"              : "Amazon",
                             "merchant_id"           : "amazon",
@@ -1526,7 +1526,7 @@ Wando API - some init info
                             "color"                 : [
                                 "silver"
                             ],
-                            "similar_prod_keyword"  : "Apple iMac MF885LL A 27 Inch",
+                            "similar_offer_keyword" : "Apple iMac MF885LL A 27 Inch",
                             
                             "photo"                 : {
                                 "main_url"              : "http:\/\/ecx.images-amazon.com\/images\/I\/51Uc7ISIJjL.jpg",
