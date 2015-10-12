@@ -1159,6 +1159,15 @@ Wando API - some init info
                 }
             }
         }
+        
++ Response 404 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "`offer_string_id` invalid "
+            "errorNo"   : 20000
+        }
+
 
 ### Add new review [PUT]
 
@@ -1200,7 +1209,14 @@ Wando API - some init info
             }
         }
 
++ Response 404 (application/json)
 
+        {
+            "status"    : "error",
+            "message"   : "`offer_string_id` invalid "
+            "errorNo"   : 20000
+        }
+        
 
 ## Wishlist get offer list [/offer/wishlist]
 
