@@ -498,11 +498,11 @@ Wando API - some init info
             }
         }
         
-+ Response 400 (application/json)
++ Response 401 (application/json)
 
         {
             "status"    : "error",
-            "message"   : "invalid token"
+            "message"   : "unauthorized"
             "errorNo"   : 10000
         }
         
@@ -555,11 +555,11 @@ Wando API - some init info
             }
         }
         
-+ Response 400 (application/json)
++ Response 401 (application/json)
 
         {
             "status"    : "error",
-            "message"   : "invalid token"
+            "message"   : "unauthorized"
             "errorNo"   : 10000
         }
         
@@ -618,11 +618,11 @@ Wando API - some init info
             }
         }
         
-+ Response 400 (application/json)
++ Response 401 (application/json)
 
         {
             "status"    : "error",
-            "message"   : "invalid token"
+            "message"   : "unauthorized"
             "errorNo"   : 10000
         }
 
@@ -681,11 +681,11 @@ Wando API - some init info
             }
         }
         
-+ Response 400 (application/json)
++ Response 401 (application/json)
 
         {
             "status"    : "error",
-            "message"   : "invalid token"
+            "message"   : "unauthorized"
             "errorNo"   : 10000
         }
         
@@ -746,11 +746,11 @@ Wando API - some init info
             }
         }
         
-+ Response 400 (application/json)
++ Response 401 (application/json)
 
         {
             "status"    : "error",
-            "message"   : "invalid token"
+            "message"   : "unauthorized"
             "errorNo"   : 10000
         }
 
@@ -797,6 +797,14 @@ Wando API - some init info
             "status"    : "error",
             "message"   : "`keyword` is a requirde parameter"
             "errorNo"   : 20001
+        }
+        
++ Response 401 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "unauthorized"
+            "errorNo"   : 10000
         }
         
         
@@ -932,6 +940,14 @@ Wando API - some init info
             "errorNo"   : 20001
         }
         
++ Response 401 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "unauthorized"
+            "errorNo"   : 10000
+        }
+        
         
 ## Filters [/offer/filters?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&cb={cb}&provider={provider}]
 
@@ -1035,6 +1051,14 @@ Wando API - some init info
             "status"    : "error",
             "message"   : "`keyword` is a requirde parameter"
             "errorNo"   : 20001
+        }
+        
++ Response 401 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "unauthorized"
+            "errorNo"   : 10000
         }
         
 
