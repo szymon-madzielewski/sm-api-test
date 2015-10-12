@@ -1302,6 +1302,15 @@ Wando API - some init info
             }
         }
         
++ Response 404 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "`offer_string_id` invalid "
+            "errorNo"   : 20000
+        }
+        
+        
 ## Wishlist add new offer [/offer/wishlist/{offerStringId}]
 
 + Parameters
@@ -1392,6 +1401,14 @@ Wando API - some init info
                 }
             }
         }
+        
++ Response 404 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "`offer_string_id` invalid "
+            "errorNo"   : 20000
+        }
 
 
 ### Remove offers from wishlist [DELETE]
@@ -1480,6 +1497,13 @@ Wando API - some init info
             }
         }
 
++ Response 404 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "`offer_string_id` invalid "
+            "errorNo"   : 20000
+        }
 
 
 ## Compare get offers list [/offer/compare]
