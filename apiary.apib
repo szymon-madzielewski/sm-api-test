@@ -89,7 +89,7 @@ Wando API - some init info
         {
             "status"    : "error",
             "message"   : "`offer_string_id` is required"
-            "errorNo"   : 10000
+            "errorNo"   : 10001
         }
         
 + Response 403 (application/json)
@@ -170,6 +170,23 @@ Wando API - some init info
                 }
             }
         }
+        
++ Response 400 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "invalid token"
+            "errorNo"   : 10000
+        }
+        
++ Response 403 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "Forbidden"
+            "errorNo"   : 403
+        }
+
         
 ## Homepage [/page/homepage]
 
