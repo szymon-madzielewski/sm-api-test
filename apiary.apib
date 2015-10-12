@@ -562,6 +562,7 @@ Wando API - some init info
             "errorNo"   : 10000
         }
         
+        
 ## Guide home [/guide/home]
 
 ### Get guides home page data [GET]
@@ -615,6 +616,15 @@ Wando API - some init info
                 }
             }
         }
+        
++ Response 400 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "invalid token"
+            "errorNo"   : 10000
+        }
+
 
 ## Guide sport [/guide/sport]
 
@@ -669,6 +679,15 @@ Wando API - some init info
                 }
             }
         }
+        
++ Response 400 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "invalid token"
+            "errorNo"   : 10000
+        }
+        
 
 ## Guide beauty [/guide/beauty]
 
@@ -725,6 +744,14 @@ Wando API - some init info
                 }
             }
         }
+        
++ Response 400 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "invalid token"
+            "errorNo"   : 10000
+        }
 
 
 # Group Offer
@@ -761,6 +788,14 @@ Wando API - some init info
                     "filters_url"   : "/offer/filters?keyword={keyword}"
                 }
             }
+        }
+        
++ Response 400 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "`keyword` is a requirde parameter"
+            "errorNo"   : 20000
         }
         
 ## Offers list [/offer/list?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}]
