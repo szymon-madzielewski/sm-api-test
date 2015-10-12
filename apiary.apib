@@ -795,7 +795,7 @@ Wando API - some init info
         {
             "status"    : "error",
             "message"   : "`keyword` is a requirde parameter"
-            "errorNo"   : 20000
+            "errorNo"   : 20001
         }
         
 ## Offers list [/offer/list?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}]
@@ -922,6 +922,13 @@ Wando API - some init info
             }
         }
         
++ Response 400 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "`keyword` is a requirde parameter"
+            "errorNo"   : 20001
+        }
         
 ## Filters [/offer/filters?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&cb={cb}&provider={provider}]
 
