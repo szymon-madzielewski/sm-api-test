@@ -178,14 +178,6 @@ Wando API - some init info
             "message"   : "invalid token"
             "errorNo"   : 10000
         }
-        
-+ Response 403 (application/json)
-
-        {
-            "status"    : "error",
-            "message"   : "Forbidden"
-            "errorNo"   : 403
-        }
 
         
 ## Homepage [/page/homepage]
@@ -361,6 +353,14 @@ Wando API - some init info
                     }
                 ]
             }
+        }
+        
++ Response 400 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "invalid token"
+            "errorNo"   : 10000
         }
         
 ## Imprint [/page/imprint]
