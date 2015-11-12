@@ -757,7 +757,7 @@ Wando API - some init info
 
 # Group Offer
 
-## Offers falz page [/offer/falz?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}]
+## Offers falz page [/offer/falz?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}&special_offer={special_offer}&free_shipping={free_shipping}]
 
 + Parameters
     + keyword (string, required) - search keyword
@@ -766,6 +766,10 @@ Wando API - some init info
     + main_cat (string, optional) - main category string name
     + filters (string, optional) - filter offers using parameters
     + no_auctions (enum["0", "1"], optional)
+        + Default: `0`
+    + special_offer (enum["0", "1"], optional)
+        + Default: `0`
+    + free_shipping (enum["0", "1"], optional)
         + Default: `0`
     + sort_by (enum["relevance", "priceAsc", "priceDesc"], optional) - sorting type
         + Default: `relevance`
@@ -808,7 +812,7 @@ Wando API - some init info
         }
         
         
-## Offers list [/offer/list?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}]
+## Offers list [/offer/list?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}&special_offer={special_offer}&free_shipping={free_shipping}]
 
 + Parameters
     + keyword (string, required) - search keyword
@@ -817,6 +821,10 @@ Wando API - some init info
     + main_cat (string, optional) - main category string name
     + filters (string, optional) - filter offers using parameters
     + no_auctions (enum["0", "1"], optional)
+        + Default: `0`
+    + special_offer (enum["0", "1"], optional)
+        + Default: `0`
+    + free_shipping (enum["0", "1"], optional)
         + Default: `0`
     + sort_by (enum["relevance", "priceAsc", "priceDesc"], optional) - sorting type
         + Default: `relevance`
@@ -952,7 +960,7 @@ Wando API - some init info
         }
         
         
-## Filters [/offer/filters?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&cb={cb}&provider={provider}]
+## Filters [/offer/filters?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&cb={cb}&provider={provider}&special_offer={special_offer}&free_shipping={free_shipping}]
 
 + Parameters
     + keyword (string, required) - search keyword
@@ -961,6 +969,10 @@ Wando API - some init info
     + main_cat (string, optional) - main category string name
     + filters (string, optional) - filter offers using parameters
     + no_auctions (enum["0", "1"], optional)
+        + Default: `0`
+    + special_offer (enum["0", "1"], optional)
+        + Default: `0`
+    + free_shipping (enum["0", "1"], optional)
         + Default: `0`
     + cb (enum["0", "1"], optional) - cache breaker, always refresh data
         + Default: `0`
@@ -1065,7 +1077,7 @@ Wando API - some init info
         }
         
 
-## Suggest [/offer/suggest?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&cb={cb}&provider={provider}]
+## Suggest [/offer/suggest?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&cb={cb}&provider={provider}&special_offer={special_offer}&free_shipping={free_shipping}]
 
 + Parameters
     + keyword (string, required) - search keyword
@@ -1073,6 +1085,10 @@ Wando API - some init info
     + max_price (number, optional) - maximum price
     + main_cat (string, optional) - main category string name
     + filters (string, optional) - filter offers using parameters
+    + special_offer (enum["0", "1"], optional)
+        + Default: `0`
+    + free_shipping (enum["0", "1"], optional)
+        + Default: `0`
     + no_auctions (enum["0", "1"], optional)
         + Default: `0`
     + cb (enum["0", "1"], optional) - cache breaker, always refresh data
