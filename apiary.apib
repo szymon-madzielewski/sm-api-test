@@ -69,11 +69,9 @@ Wando API - some init info
 ### add clickout data [POST]
 
 + Attributes
+    + `token`: `5667ffa92b8240.03731362` (string, required) - curent user token key
     + `offer_string_id`: `mac+mini,1234` (string, required) - offer string id
-    + `data_provider`: `become` (string, required) - provider string id
-    + `keyword`: `mac+mini` (string, required) - keyword used to get offers
     + `display_index`: `0` (number, required) - offer position on page
-    + `main_category`: `clothing` (string, optional) - main category name
     + `filters` (string, optional) - current filters list
     + `clickout_type_id`: `1` (number, optional) - clickout type, element on page that was used for clickout (debugger clickout)
         + Default: `1`
