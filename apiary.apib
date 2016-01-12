@@ -2171,3 +2171,126 @@ Wando API - some init info
         
         
 # Group Catalogue
+
+### check if catalogue url - return offer/category responswe type [POST]
+
+    - `type`: can be: category, offer, or null if invalid url
+        - for detected type `category` placoholder `offer` will have null value
+        - for detected type `offer` placeholder `category` will have null value
+        - for detected type `null` placeholder `category` and `offer` will have null value, invalid catalogue link
+        
+
++ Response 200 (application/json)
+
+        {
+            "status"    : "success",
+            "message"   : "",
+            "data"      : {
+                "type": "category",
+                "breadcrumbs": {
+                    "/buch-horbuch-kalender": "buch-horbuch-kalender",
+                    "/buch-horbuch-kalender/kinder-jugendbuch": "kinder-jugendbuch"
+                },
+                "category": {
+                    "sub-category-list": [],
+                    "offers-list": [
+                        {
+                            "provider": "become",
+                            "title": "WAS IST WAS - Starter-Set \"Dinosaurier\" inklusive Buch und..., NoColor, Gr.",
+                            "description": "TING WAS IST WAS - Starter-Set Dinosaurier inklusive Buch und Stift Brachiosaurus frisst gerne Baumwipfel, Maiasaura bringt ihren Jungen Nadelbaumzweige ans Nest und Tyrannosaurus jagt sein Fressen lieber selbst. Über 600 Hörerlebnisse zum Antippen mit dem TING-Hörstift, auch unter den Entdeckerklappen, lassen die jungen Leser in das faszinierende Zeitalter der Dinosaurier eintauchen. Die Vorlesefunktion, interaktive Spiele, Überraschungseffekte beim zweiten Antippen und witzige Dialoge sorgen für eine abwechslungsreiche Beschäftigungsmöglichkeit mit dem Buch. Ladevorgang: ACHTUNG: Nicht geeignet für Kinder unter drei Jahren wegen langer Schnüre. Strangulationsgefahr.   Breite: 27 cm Länge: 37 cm Alter geeignet ab: 48 Monaten, Geschlecht: Unisex Warnhinweise Spielzeug: ACHTUNG: Nicht geeignet für Kinder unter drei Jahren wegen verschluckbarer Kleinteile. Erstickungsgefahr., , bunt, NoColor",
+                            "price": "49.95 EUR",
+                            "price_clean": "49.95",
+                            "price_min": "49.95",
+                            "price_max": "49.95",
+                            "price_currency": "EUR",
+                            "price_currency_symbol": "EUR",
+                            "shipping_price": "5.95 EUR",
+                            "photo": {
+                                "main_url": "http://images.otto.de/asset/mmo/Preset_PSM/13769570.jpg",
+                                "thumb_url": "http://images.otto.de/asset/mmo/Preset_PSM/13769570.jpg"
+                            },
+                            "trigger_keyword": "bilderbuch",
+                            "offer_string_id": "bilderbuch,become,8614870",
+                            "redirect_url": "{--REDIRECT_URL--}",
+                            "display_index": 1,
+                            "details_url": "/buch-horbuch-kalender/kinder-jugendbuch/bilderbuch/bilderbuch,become,8614870"
+                        },
+                        {
+                            "provider": "become",
+                            "title": "WAS IST WAS - Starter-Set \"Zoo\" inklusive Buch und Stift, NoColor, Gr.",
+                            "description": "TING WAS IST WAS - Starter-Set Zoo inklusive Buch und Stift Kunterbunte Aras schwirren laut krächzend im Tropenhaus umher, die Elefanten trompeten und mit einem Platsch taucht ein Delfin ins Wassermit dem TING Hörstift fühlen sich Kinder wie bei einem Besuch im Zoo. Spannende Informationen rund um das Leben der Zootiere, tolle interaktive Spiele und über 550 Punkte zum Antippen garantieren kurzweiligen Beschäftigungsspaß. Das Starterset enthält den WAS IST WAS Junior Band Komm mit in den Zoo und einen TING Hörstift. Ladevorgang: ACHTUNG: Nicht geeignet für Kinder unter drei Jahren wegen langer Schnüre. Strangulationsgefahr.   Breite: 27 cm Länge: 37 cm Alter geeignet ab: 48 Monaten, Geschlecht: Unisex Warnhinweise Spielzeug: ACHTUNG: Nicht geeignet für Kinder unter drei Jahren wegen verschluckbarer Kleinteile. Erstickungsgefahr., , bunt, NoColor",
+                            "price": "49.95 EUR",
+                            "price_clean": "49.95",
+                            "price_min": "49.95",
+                            "price_max": "49.95",
+                            "price_currency": "EUR",
+                            "price_currency_symbol": "EUR",
+                            "shipping_price": "5.95 EUR",
+                            "photo": {
+                                "main_url": "http://images.otto.de/asset/mmo/Preset_PSM/13769515.jpg",
+                                "thumb_url": "http://images.otto.de/asset/mmo/Preset_PSM/13769515.jpg"
+                            },
+                            "trigger_keyword": "bilderbuch",
+                            "offer_string_id": "bilderbuch,become,8735768",
+                            "redirect_url": "{--REDIRECT_URL--}",
+                            "display_index": 1,
+                            "details_url": "/buch-horbuch-kalender/kinder-jugendbuch/bilderbuch/bilderbuch,become,8735768"
+                        },
+                    ]
+                },
+                "offer": {
+                    "load-more-url": "/search?keyword=musikerwitze&wtt=ose",
+                    "details": {
+                    "provider": "become",
+                    "title": "Musikerwitze",
+                    "description": "Voggenreiter Musikerwitze: über 500 der besten Musikerwitze auf 136 Seiten.",
+                    "price": "7.95 EUR",
+                    "price_clean": "7.95",
+                    "price_min": "7.95",
+                    "price_max": "7.95",
+                    "price_currency": "EUR",
+                    "price_currency_symbol": "EUR",
+                    "shipping_price": "0 EUR",
+                    "photo": {
+                        "main_url": "http://www.thomann.de/prodbilder/132397.jpg",
+                        "thumb_url": "http://www.thomann.de/prodbilder/132397.jpg"
+                    },
+                    "trigger_keyword": "humor-buch",
+                    "offer_string_id": "humor-buch,become,12729268",
+                    "redirect_url": "{--REDIRECT_URL--}",
+                    "display_index": 1,
+                    "details_url": "/buch-horbuch-kalender/belletristik-roman/humor-buch/humor-buch,become,12729268"
+                },
+                "similar-list": [
+                    {
+                        "provider": "become",
+                        "title": "Die 222 Besten Dirigentenwitze",
+                        "description": "Schott Die 222 besten Dirigentenwitze von Harald Skorepa",
+                        "price": "7.00 EUR",
+                        "price_clean": "7.00",
+                        "price_min": "7.00",
+                        "price_max": "7.00",
+                        "price_currency": "EUR",
+                        "price_currency_symbol": "EUR",
+                        "shipping_price": "0 EUR",
+                        "photo": {
+                            "main_url": "http://www.thomann.de/prodbilder/113696.jpg",
+                            "thumb_url": "http://www.thomann.de/prodbilder/113696.jpg"
+                        },
+                        "trigger_keyword": "humor-buch",
+                        "offer_string_id": "humor-buch,become,12755243",
+                        "redirect_url": "{--REDIRECT_URL--}",
+                        "display_index": 1,
+                        "details_url": "/buch-horbuch-kalender/belletristik-roman/humor-buch/humor-buch,become,12755243"
+                    }
+                ]
+            }
+        }
+        
++ Response 401 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "unauthorized"
+            "errorNo"   : 10000
+        }
