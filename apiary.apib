@@ -2386,7 +2386,7 @@ Wando API - some init info
         
 ## category [/category]
 
-### get category /category [GET]
+### get main category list [GET]
 
 + Response 200 (application/json)
 
@@ -2415,6 +2415,43 @@ Wando API - some init info
                             "clickout_url"  : "/offer/falz?cat_id=12347"
                             "have_sub_el"   : true
                             "sub_el_url"    : "/category/12347",
+                        }
+                    ]
+                } 
+            }
+        }
+        
+## category [/category/12345]
+        
+### get main category list by parent_id [GET]
+
++ Response 200 (application/json)
+
+        {
+            "status"    : "success",
+            "message"   : "",
+            "data"      : {
+                "categotry" : {
+                    "level"     : 2,
+                    "name"      : "Haushalt & Wohnen",
+                    "elements"  : [
+                        {
+                            "name"          : "Bürobedarf & Büroeinrichtung"
+                            "clickout_url"  : "/offer/falz?cat_id=12348"
+                            "have_sub_el"   : true
+                            "sub_el_url"    : "/category/12348",
+                        },
+                        {
+                            "name"          : "Computer-Zubehör"
+                            "clickout_url"  : "/offer/falz?cat_id=12349"
+                            "have_sub_el"   : true
+                            "sub_el_url"    : "/category/12349",
+                        },
+                        {
+                            "name"          : "Eingabegeräte"
+                            "clickout_url"  : "/offer/falz?cat_id=12350"
+                            "have_sub_el"   : true
+                            "sub_el_url"    : "/category/12350",
                         }
                     ]
                 } 
