@@ -2403,29 +2403,55 @@ Wando API - some init info
                     "name"      : "Top category level",
                     "list"      : [
                         {
+                            "level"         : 2,
                             "name"          : "Haushalt & Wohnen"
                             "clickout_url"  : "/offer/falz?cat_id=12345"
                             "have_sub_el"   : true
-                            "sub_el_url"    : "/category/12345",
+                            "list"          : [
+                                {
+                                    "level"         : 3,
+                                    "name"          : "Bürobedarf & Büroeinrichtung"
+                                    "clickout_url"  : "/offer/falz?cat_id=12348"
+                                    "have_sub_el"   : true
+                                    "sub_el_url"    : "/category/12348",
+                                },
+                                {
+                                    "level"         : 3,
+                                    "name"          : "Computer-Zubehör"
+                                    "clickout_url"  : "/offer/falz?cat_id=12349"
+                                    "have_sub_el"   : true
+                                    "sub_el_url"    : "/category/12349",
+                                },
+                                {
+                                    "level"         : 3,
+                                    "name"          : "Eingabegeräte"
+                                    "clickout_url"  : "/offer/falz?cat_id=12350"
+                                    "have_sub_el"   : false
+                                }
+                            ]
                         },
                         {
+                            "level"         : 2,
                             "name"          : "Computer & Hardware"
                             "clickout_url"  : "/offer/falz?cat_id=12346"
-                            "have_sub_el"   : true
-                            "sub_el_url"    : "/category/12346",
+                            "have_sub_el"   : false
                         },
                         {
+                            "level"         : 2,
                             "name"          : "HiFi & Audio"
                             "clickout_url"  : "/offer/falz?cat_id=12347"
-                            "have_sub_el"   : true
-                            "sub_el_url"    : "/category/12347",
+                            "have_sub_el"   : false
                         }
                     ]
                 } 
             }
         }
         
-## sub category [/category/12345]
+## sub category [/category/12345?inc_sub_levels_no=inc_sub_levels_no]
+
++ Parameters
+    + `inc_sub_levels_no` (string, optional) - include sub levels, e.g. 2 will provide list with 2 additional sublevels if exists
+        + Default: 2
         
 ### get main category list by parent_id [GET]
 
@@ -2443,19 +2469,38 @@ Wando API - some init info
                             "name"          : "Bürobedarf & Büroeinrichtung"
                             "clickout_url"  : "/offer/falz?cat_id=12348"
                             "have_sub_el"   : true
-                            "sub_el_url"    : "/category/12348",
+                            "list"          : [
+                                {
+                                    "level"         : 3,
+                                    "name"          : "Aktenvernichter"
+                                    "clickout_url"  : "/offer/falz?cat_id=12361"
+                                    "have_sub_el"   : true
+                                    "sub_el_url"    : "/category/12348",
+                                },
+                                {
+                                    "level"         : 3,
+                                    "name"          : "Bindegeräte"
+                                    "clickout_url"  : "/offer/falz?cat_id=12362"
+                                    "have_sub_el"   : true
+                                    "sub_el_url"    : "/category/12349",
+                                },
+                                {
+                                    "level"         : 3,
+                                    "name"          : "Briefwaagen"
+                                    "clickout_url"  : "/offer/falz?cat_id=12363"
+                                    "have_sub_el"   : false
+                                }
+                            ]
                         },
                         {
                             "name"          : "Computer-Zubehör"
                             "clickout_url"  : "/offer/falz?cat_id=12349"
-                            "have_sub_el"   : true
-                            "sub_el_url"    : "/category/12349",
+                            "have_sub_el"   : false
                         },
                         {
                             "name"          : "Eingabegeräte"
                             "clickout_url"  : "/offer/falz?cat_id=12350"
-                            "have_sub_el"   : true
-                            "sub_el_url"    : "/category/12350",
+                            "have_sub_el"   : false
                         }
                     ]
                 } 
