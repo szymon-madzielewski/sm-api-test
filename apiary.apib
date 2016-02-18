@@ -869,13 +869,14 @@ Wando API - some init info
 
 # Group Offer
 
-## Offers falz page [/offer/falz?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}&special_offer={special_offer}&free_shipping={free_shipping}]
+## Offers falz page [/offer/falz?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}&special_offer={special_offer}&free_shipping={free_shipping}&cat_id={cat_id}]
 
 + Parameters
     + keyword (string, required) - search keyword
     + min_price (number, optional) - minimum price
     + max_price (number, optional) - maximum price
     + main_cat (string, optional) - main category string name
+    + cat_id (string, optional) - category ID to filter out
     + filters (string, optional) - filter offers using parameters
     + no_auctions (enum["0", "1"], optional)
         + Default: `0`
@@ -924,13 +925,14 @@ Wando API - some init info
         }
         
         
-## Offers list [/offer/list?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}&special_offer={special_offer}&free_shipping={free_shipping}]
+## Offers list [/offer/list?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}&special_offer={special_offer}&free_shipping={free_shipping}&cat_id={cat_id}]
 
 + Parameters
     + keyword (string, required) - search keyword
     + min_price (number, optional) - minimum price
     + max_price (number, optional) - maximum price
     + main_cat (string, optional) - main category string name
+    + cat_id (string, optional) - category ID to filter out
     + filters (string, optional) - filter offers using parameters
     + no_auctions (enum["0", "1"], optional)
         + Default: `0`
@@ -1404,13 +1406,14 @@ Wando API - some init info
         }
         
         
-## Filters [/offer/filters?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&cb={cb}&provider={provider}&special_offer={special_offer}&free_shipping={free_shipping}]
+## Filters [/offer/filters?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&cb={cb}&provider={provider}&special_offer={special_offer}&free_shipping={free_shipping}&cat_id={cat_id}]
 
 + Parameters
     + keyword (string, required) - search keyword
     + min_price (number, optional) - minimum price
     + max_price (number, optional) - maximum price
     + main_cat (string, optional) - main category string name
+    + cat_id (string, optional) - category ID to filter out
     + filters (string, optional) - filter offers using parameters
     + no_auctions (enum["0", "1"], optional)
         + Default: `0`
@@ -2405,27 +2408,27 @@ Wando API - some init info
                         {
                             "level"         : 2,
                             "name"          : "Haushalt & Wohnen"
-                            "clickout_url"  : "/offer/falz?cat_id=12345"
+                            "clickout_url"  : "/offer/list?cat_id=12345"
                             "have_sub_el"   : true
                             "list"          : [
                                 {
                                     "level"         : 3,
                                     "name"          : "Bürobedarf & Büroeinrichtung"
-                                    "clickout_url"  : "/offer/falz?cat_id=12348"
+                                    "clickout_url"  : "/offer/list?cat_id=12348"
                                     "have_sub_el"   : true
                                     "sub_el_url"    : "/category/12348",
                                 },
                                 {
                                     "level"         : 3,
                                     "name"          : "Computer-Zubehör"
-                                    "clickout_url"  : "/offer/falz?cat_id=12349"
+                                    "clickout_url"  : "/offer/list?cat_id=12349"
                                     "have_sub_el"   : true
                                     "sub_el_url"    : "/category/12349",
                                 },
                                 {
                                     "level"         : 3,
                                     "name"          : "Eingabegeräte"
-                                    "clickout_url"  : "/offer/falz?cat_id=12350"
+                                    "clickout_url"  : "/offer/list?cat_id=12350"
                                     "have_sub_el"   : false
                                 }
                             ]
@@ -2433,13 +2436,13 @@ Wando API - some init info
                         {
                             "level"         : 2,
                             "name"          : "Computer & Hardware"
-                            "clickout_url"  : "/offer/falz?cat_id=12346"
+                            "clickout_url"  : "/offer/list?cat_id=12346"
                             "have_sub_el"   : false
                         },
                         {
                             "level"         : 2,
                             "name"          : "HiFi & Audio"
-                            "clickout_url"  : "/offer/falz?cat_id=12347"
+                            "clickout_url"  : "/offer/list?cat_id=12347"
                             "have_sub_el"   : false
                         }
                     ]
@@ -2467,39 +2470,39 @@ Wando API - some init info
                     "list"      : [
                         {
                             "name"          : "Bürobedarf & Büroeinrichtung"
-                            "clickout_url"  : "/offer/falz?cat_id=12348"
+                            "clickout_url"  : "/offer/list?cat_id=12348"
                             "have_sub_el"   : true
                             "list"          : [
                                 {
                                     "level"         : 3,
                                     "name"          : "Aktenvernichter"
-                                    "clickout_url"  : "/offer/falz?cat_id=12361"
+                                    "clickout_url"  : "/offer/list?cat_id=12361"
                                     "have_sub_el"   : true
                                     "sub_el_url"    : "/category/12348",
                                 },
                                 {
                                     "level"         : 3,
                                     "name"          : "Bindegeräte"
-                                    "clickout_url"  : "/offer/falz?cat_id=12362"
+                                    "clickout_url"  : "/offer/list?cat_id=12362"
                                     "have_sub_el"   : true
                                     "sub_el_url"    : "/category/12349",
                                 },
                                 {
                                     "level"         : 3,
                                     "name"          : "Briefwaagen"
-                                    "clickout_url"  : "/offer/falz?cat_id=12363"
+                                    "clickout_url"  : "/offer/list?cat_id=12363"
                                     "have_sub_el"   : false
                                 }
                             ]
                         },
                         {
                             "name"          : "Computer-Zubehör"
-                            "clickout_url"  : "/offer/falz?cat_id=12349"
+                            "clickout_url"  : "/offer/list?cat_id=12349"
                             "have_sub_el"   : false
                         },
                         {
                             "name"          : "Eingabegeräte"
-                            "clickout_url"  : "/offer/falz?cat_id=12350"
+                            "clickout_url"  : "/offer/list?cat_id=12350"
                             "have_sub_el"   : false
                         }
                     ]
