@@ -2380,6 +2380,48 @@ Wando API - some init info
         }
         
         
+        
+        
+# Group Category
+        
+## category [/category]
+
+### get category /category [GET]
+
++ Response 200 (application/json)
+
+        {
+            "status"    : "success",
+            "message"   : "",
+            "data"      : {
+                "categotry" : {
+                    "level"     : 1,
+                    "name"      : "Haushalt & Wohnen",
+                    "elements"  : [
+                        {
+                            "name"          : "Haushalt & Wohnen"
+                            "clickout_url"  : "/offer/falz?cat_id=12345"
+                            "have_sub_el"   : true
+                            "sub_el_url"    : "/category/12345",
+                        },
+                        {
+                            "name"          : "Computer & Hardware"
+                            "clickout_url"  : "/offer/falz?cat_id=12346"
+                            "have_sub_el"   : true
+                            "sub_el_url"    : "/category/12346",
+                        },
+                        {
+                            "name"          : "HiFi & Audio"
+                            "clickout_url"  : "/offer/falz?cat_id=12347"
+                            "have_sub_el"   : true
+                            "sub_el_url"    : "/category/12347",
+                        }
+                    ]
+                } 
+            }
+        }
+
+        
 # Group Catalogue
 
 ## Catalogue [/catalogue]
