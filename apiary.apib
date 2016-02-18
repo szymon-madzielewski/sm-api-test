@@ -2384,7 +2384,11 @@ Wando API - some init info
         
 # Group Category
         
-## main category [/category]
+## main category [/category?inc_sub_levels_no=inc_sub_levels_no]
+
++ Parameters
+    + `inc_sub_levels_no` (string, optional) - include sub levels, e.g. 2 will provide list with 2 additional sublevels if exists
+        + Default: 2
 
 ### get main category list [GET]
 
@@ -2397,7 +2401,7 @@ Wando API - some init info
                 "categotry" : {
                     "level"     : 1,
                     "name"      : "Top category level",
-                    "elements"  : [
+                    "list"      : [
                         {
                             "name"          : "Haushalt & Wohnen"
                             "clickout_url"  : "/offer/falz?cat_id=12345"
@@ -2434,7 +2438,7 @@ Wando API - some init info
                 "categotry" : {
                     "level"     : 2,
                     "name"      : "Haushalt & Wohnen",
-                    "elements"  : [
+                    "list"      : [
                         {
                             "name"          : "Bürobedarf & Büroeinrichtung"
                             "clickout_url"  : "/offer/falz?cat_id=12348"
