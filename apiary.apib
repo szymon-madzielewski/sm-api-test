@@ -2677,3 +2677,31 @@ Wando API - some init info
             "message"   : "unauthorized"
             "errorNo"   : 10000
         }
+        
+        
+# Group Tracker
+
+## add yahoo impression [/tracker/yahoo/impression]
+
+### save impression [GET]
+
++ Response 200 (text/html)
+
+        ok
+        
+        
+## add yahoo click [/tracker/yahoo/click?id={id}&rk={rk}&cts={cts}&wt={wt}&wq={wq}&wc={wc}]
+
++ Parameters
+    + id (string, required) - yahoo impression ID
+    + wt (string, required) - wando token/user_id
+    + rk (int, optional) - yahoo ad position
+    + cts (int, optional) - yahoo ad click timestam
+    + wq (string, optional) - wando keyword
+    + wc (string, optional) - wando category
+
+### save click [GET]
+
++ Response 200 (text/html)
+
+        ok
