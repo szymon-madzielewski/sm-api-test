@@ -1344,8 +1344,9 @@ Wando API - some init info
                 },
                 "banners": [
                     {
-                        "type"  : "banner_half",
-                        "title" : "Jetzt",
+                        "type"      : "banner_half",
+                        "position"  : "right",
+                        "title"     : "Jetzt",
                         "text"  : [
                             {
                                 "preffix"   : "bis zu",
@@ -1370,24 +1371,48 @@ Wando API - some init info
                         ]
                     },
                     {
-                        "type"  : "banner_mini",
-                        "title" : "Home Entertainment",
-                        "text"  : [
+                        "type"      : "banner_mini",
+                        "position"  : "left",
+                        "content": [
                             {
-                                "description"   : "Top-Produkte schon ab",
-                                "offer"         : "399 €",
-                                "cta"           : "Jetzt entdecken"
+                                "title" : "Home Entertainment",
+                                "text"  : [
+                                    {
+                                        "description"   : "Top-Produkte schon ab",
+                                        "offer"         : "399 €",
+                                        "cta"           : "Jetzt entdecken"
+                                    }
+                                ],
+                                "color" : "standard", 
+                                "link"  : {
+                                    "title" : "Title of Link",
+                                    "href"  : "/url/"
+                                },
+                                "image" : {
+                                    "title" : "",
+                                    "src"   : ""
+                                }
+                            },
+                            {
+                                "title" : "Home Entertainment",
+                                "text"  : [
+                                    {
+                                        "description"   : "Top-Produkte schon ab",
+                                        "offer"         : "399 €",
+                                        "cta"           : "Jetzt entdecken"
+                                    }
+                                ],
+                                "color" : "standard", 
+                                "link"  : {
+                                    "title" : "Title of Link",
+                                    "href"  : "/url/"
+                                },
+                                "image" : {
+                                    "title" : "",
+                                    "src"   : ""
+                                }
                             }
-                        ],
-                        "color" : "standard", 
-                        "link"  : {
-                            "title" : "Title of Link",
-                            "href"  : "/url/"
-                        },
-                        "image" : {
-                            "title" : "",
-                            "src"   : ""
-                        }
+                        ]
                     }
                 ],
                 "special_offers": [
