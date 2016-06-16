@@ -309,9 +309,9 @@ Wando API - some init info
                 "body"      : {
                     "banners" : [
                         {
-                            type    : "banner_1"a
-                            text    : "Topseller Produkte"
-                            title   : "Am meisten bei uns gesucht:"
+                            type    : "banner_full",
+                            title   : "Am meisten bei uns gesucht:",
+                            text    : "Topseller Produkte",
                             links   : [
                                 {
                                     title: "iPhone 6S",
@@ -1342,7 +1342,54 @@ Wando API - some init info
                         }
                     ]
                 },
-                
+                "banners": [
+                    {
+                        "type"  : "banner_half",
+                        "title" : "Jetzt",
+                        "text"  : [
+                            {
+                                "preffix"   : "bis zu",
+                                "offer"     : "50% Rabatt",
+                                "content"   : "auf viele Produkte aus diesen Kategorien"
+                            }
+                        ],
+                        "color" : "standard", 
+                        "links": [
+                            {
+                               "title"  : "Computer",
+                               "href"    : ""
+                            },
+                            {
+                               "title"  : "Hifi & Audio",
+                               "href"    : ""
+                            },
+                            {
+                               "title"  : "TV & Video",
+                               "href"    : ""
+                            }
+                        ]
+                    },
+                    {
+                        "type"  : "banner_mini",
+                        "title" : "Home Entertainment",
+                        "text"  : [
+                            {
+                                "description"   : "Top-Produkte schon ab",
+                                "offer"         : "399 €",
+                                "cta"           : "Jetzt entdecken"
+                            }
+                        ],
+                        "color" : "standard", 
+                        "link"  : {
+                            "title" : "Title of Link",
+                            "href"  : "/url/",
+                        },
+                        "image" : {
+                            "title" : "",
+                            "src"   : ""
+                        }
+                    }
+                ],
                 "special_offers": [
                     {
                         "offer_string_id": "samsung,become,922812561",
