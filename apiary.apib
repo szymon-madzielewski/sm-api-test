@@ -115,6 +115,7 @@ Wando API - some init info
                 "api_url"       : "http://private-527ae-wandoapi.apiary-mock.com",
                 "country"       : "us",
                 "page_id"       : "products-i-want_co_uk",
+                "title"         : "Products I Want",
                 "contact_email" : "info@pricedetective.net",
                 "company_name"  : "Wando Internet Solutions GmbH",
                 "category_data" : [
@@ -980,7 +981,7 @@ Wando API - some init info
         }
         
         
-## Offers list [/offer/list?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}&special_offer={special_offer}&free_shipping={free_shipping}&cat_id={cat_id}]
+## Offers list [/offer/list?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}&special_offer={special_offer}&free_shipping={free_shipping}&cat_id={cat_id}&top_seller={top_seller}]
 
 + Parameters
     + keyword (string, required) - search keyword
@@ -1004,6 +1005,8 @@ Wando API - some init info
     + cb (enum["0", "1"], optional) - cache breaker, always refresh data
         + Default: `0`
     + provider (string, optional) - comma separated provider string identifiers
+    + top_seller (enum["0", "1", "-1"], optional ) - activating/ deactivating topseller products
+        + Default: `0`
 
 ### Get offers list [GET]
 
