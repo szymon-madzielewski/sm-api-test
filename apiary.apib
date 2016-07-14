@@ -927,6 +927,119 @@ Wando API - some init info
         }
 
 
+# Group Banners
+
+## Ger banners [/banner/list?type={type}]
+
++ Parameters
+    + type (string, optional) - comma separated list of types to return, no value, return all
+
+### Get banner list [GET]
+
++ Response 200 (application/json)
+
+        {
+            "status"        : "success",
+            "data"          : {
+                "banner"        : {
+                    "list"          : [
+                        {
+                            "type"  : "banner_home",
+                            "text"  : "Topseller products",
+                            "title" : "Most frequent search requests:",
+                            "links" : [
+                                {
+                                    "title" : "iPhone 6S",
+                                    "href"  : "/?keyword=iphone+6s"
+                                },
+                                {
+                                    "title" : "Samsung Galaxy S6",
+                                    "href"  : "/?keyword=samsung+galaxy+s6"
+                                },
+                                {
+                                    "title" : "Digital Camera",
+                                    "href"  : "/?keyword=digital+camera"
+                                },
+                                {
+                                    "title" : "iPad",
+                                    "href"  : "/?keyword=ipad"
+                                },
+                                {
+                                    "title" : "Superfood",
+                                    "href"  : "/?keyword=superfood"
+                                },
+                                {
+                                    "title" : "Garden Chair",
+                                    "href"  : "/?keyword=garden+chair"
+                                },
+                                {
+                                    "title" : "Headphones",
+                                    "href"  : "/?keyword=headphones"
+                                },
+                                {
+                                    "title" : "SD Card",
+                                    "href"  : "/?keyword=sd+card"
+                                },
+                                {
+                                    "title" : "Flip Flops",
+                                    "href"  : "/?keyword=flip+flops"
+                                },
+                                {
+                                    "title" : "Amazon Kindle",
+                                    "href"  : "/?keyword=amazon+kindle"
+                                },
+                                {
+                                    "title" : "Baseball Cap",
+                                    "href"  : "/?keyword=baseball+cap"
+                                },
+                                {
+                                    "title" : "Lawnmower",
+                                    "href"  : "/?keyword=lawnmower"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "lang"          : {
+                }
+            }
+        }
+
++ Response 401 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "unauthorized"
+            "errorNo"   : 10000
+        }
+        
+## Ger banners by type [/banner/list/type1]
+        
+### Get banner by type [GET]
+
++ Response 200 (application/json)
+
+        {
+            "status"        : "success",
+            "data"          : {
+                "banner"        : {
+                    
+                },
+                "lang"          : {
+                
+                }
+            }
+        }
+
++ Response 401 (application/json)
+
+        {
+            "status"    : "error",
+            "message"   : "unauthorized"
+            "errorNo"   : 10000
+        }
+
+
 # Group Offer
 
 ## Offers falz page [/offer/falz?keyword={keyword}&main_cat={main_cat}&min_price={min_price}&max_price={max_price}&filters={filters}&no_auctions={no_auctions}&sort_by={sort_by}&cb={cb}&provider={provider}&page={page}&per_page={per_page}&special_offer={special_offer}&free_shipping={free_shipping}&cat_id={cat_id}]
