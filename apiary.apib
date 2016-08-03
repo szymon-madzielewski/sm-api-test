@@ -312,30 +312,9 @@ Wando API - some init info
             "status"    : "success",
             "data"      : {
                 "body"      : {
-                    "banners" : [
-                        {
-                            type    : "banner_full",
-                            title   : "Am meisten bei uns gesucht:",
-                            text    : "Topseller Produkte",
-                            links   : [
-                                {
-                                    title: "iPhone 6S",
-                                    href: "/?keywiord=iphone+6s"
-                                },
-                                {
-                                    title: "iPhone 6S",
-                                    href: "/?keywiord=iphone+6s"
-                                }
-                            ]
-                        }
+                    "banners_list_ids" : [
+                        "banner_home"
                     ],
-                    "banner"    : {
-                        "buzzword"  : [
-                            "sunglasses",
-                            "swimsuits",
-                            "sandals"
-                        ]
-                    },
                     
                     "header"    : {
                         "first"     : "Compare Products Online",
@@ -944,10 +923,11 @@ Wando API - some init info
                 "banner"        : {
                     "list"          : [
                         {
-                            "type"  : "banner_home",
-                            "text"  : "Topseller products",
-                            "title" : "Most frequent search requests:",
-                            "links" : [
+                            "string_id" : "banner_home",
+                            "type"      : "banner_home",
+                            "text"      : "Topseller products",
+                            "title"     : "Most frequent search requests:",
+                            "links"     : [
                                 {
                                     "title" : "iPhone 6S",
                                     "href"  : "/?keyword=iphone+6s"
@@ -3200,6 +3180,11 @@ Wando API - some init info
                         "details_url": "/buch-horbuch-kalender/belletristik-roman/humor-buch/humor-buch,become,12755243"
                     }
                 ]
+            },
+            "lang": {
+                "title"         : "Audio, Video & TV",
+                "subCategory"   : "Unterkategorien",
+                "offersList"    : "Angebote"
             }
         }
         
